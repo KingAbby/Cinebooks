@@ -1,0 +1,5 @@
+body{
+    background: url(assets/Images/goodbye.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}

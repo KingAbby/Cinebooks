@@ -1,0 +1,103 @@
+body{
+  background: url(assets/Images/bacg.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+ul#nav {
+  margin: -8px -1em;
+  margin-bottom: 3em;
+  padding: 20px 2em;
+  background-image: linear-gradient(to left, rgb(13, 92, 240), black);
+}
+
+#nav li {
+  list-style: none;
+  padding: 0 20px;
+  margin-right: 20px;
+  cursor: grab;
+}
+
+#nav select {
+  background-color: rgb(13, 92, 240);
+  color: wheat;
+}
+
+#nav option {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0;
+  color: wheat;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+ul#nav li a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0;
+  color: wheat;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+ul#nav li a:hover {
+  color: whitesmoke;
+  border-bottom: 5px solid wheat;
+}
+
+#card {
+  text-align: center;
+}
+
+#card .card-body {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 50px 30px;
+  margin-left: 15px;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#card .body button {
+  padding: 20px 60px 20px 60px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: medium;
+  background-color: transparent;
+  color: wheat;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+#card .body button:hover {
+  background-image: linear-gradient(to left, rgb(13, 92, 240), black);
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+  transition: 0.5s ease;
+}
+
+#card .body h4 {
+  color: wheat;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+#card h2 {
+  color: wheat;
+  font-size: 64px;
+  font-weight: bolder;
+  padding: 10px 0;
+}

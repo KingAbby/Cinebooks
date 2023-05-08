@@ -1,0 +1,167 @@
+body{
+    background: url(../Images/bacg.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+/*Nav-Bar*/
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+  
+ul#nav {
+    margin: -8px -1em;
+    margin-bottom: 3em;
+    padding: 20px 2em;
+    background-image: linear-gradient(to left, rgb(13, 92, 240), black);
+}
+  
+#nav li {
+    list-style: none;
+    padding: 0 20px;
+    margin-right: 20px;
+    cursor: grab;
+}
+
+#nav select {
+    background-color: rgb(13, 92, 240);
+    color: wheat;
+}
+
+#nav option {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0;
+    color: wheat;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+ul#nav li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0;
+    color: wheat;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+  
+ul#nav li a:hover {
+    color: whitesmoke;
+    border-bottom: 5px solid wheat;
+}
+
+.title h2 {
+    text-align: center;
+    align-items: center;
+    color: rgb(13, 92, 240);
+}
+
+/*Movie Desc*/
+#info {
+    display: flex;
+    margin-top: 20px;
+}
+
+#info .movie {
+    width: 25%;
+    margin-right: 50px;
+    min-width: 250px;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin: 15px 20px;
+    transition: 0.2s ease;
+    color: wheat;
+}
+
+#info .movie img {
+    width: 100%;
+    border-radius: 20px;
+    float: left;
+}
+
+#info .desc table {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: -2px;
+    color: wheat;
+}
+
+#info .desc h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: wheat;
+}
+
+#info .desc h4 {
+    font-size: 64px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: rgb(13, 92, 240);
+}
+
+/*Movie Genre*/
+.title h4{
+    color: rgb(13, 92, 240);
+    margin-left: 10px;
+}
+
+.genre {
+    display: flex;
+    justify-content: row;
+}
+.genre a {
+    padding: 20px 60px 20px 60px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: medium;
+    background-color: transparent;
+    color: wheat;
+    cursor: pointer;
+    border: 2.5px solid slategray;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: auto 20px;
+}
+  
+.genre a:hover {
+    color: wheat;
+    background-image: linear-gradient(to left, rgb(13, 92, 240), black);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+    transition: 0.5s ease;
+}
+
+/* Youtube video */
+
+.movie-overview {
+    position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 75%;
+}
+
+#overview {
+    position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
