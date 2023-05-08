@@ -1,22 +1,23 @@
-import BlackPanther from '../assets/Images/bppot.jpeg'
-import AntManIMG from '../assets/Images/antmanpot.png'
+import BPPOT from '../assets/Images/bppot.jpeg'
+import ANTMANPOT from '../assets/Images/antmanpot.png'
+import AVATARPOT from '../assets/Images/avatarpot.jpg'
+import BTPOT from '../assets/Images/btpot.jpg'
+import BATPOT from '../assets/Images/batpot.jpg'
+import FASTXPOT from '../assets/Images/fastxpot.jpg'
+import NFSPOT from '../assets/Images/nfspot.jpg'
+import JWPOT from '../assets/Images/jwpot.jpg'
+import FORDFERARRIPOT from '../assets/Images/fordvferraripot.jpg'
+import CONJURINGPOT from '../assets/Images/conjuringpot.jpg'
+import HUSTLEPOT from '../assets/Images/hustlepot.jpg'
+import TWOWSPOT from '../assets/Images/twowspot.jpg'
+import TLOUPOT from '../assets/Images/thelastofuspot.jpg'
+
 
 const Index = () => {
   return (
     <>
       <div>
         <ul id="nav">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
           <li>
             <a href="Home.js">Home</a>
           </li>
@@ -88,7 +89,7 @@ const Index = () => {
         <h2>Movie Selection</h2>
         <div className="card-body">
           <div className="body">
-            <img src={BlackPanther} alt="Man Jumping" />
+            <img src={BPPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Black Panther: Wakanda Forever</h3>
@@ -110,7 +111,7 @@ const Index = () => {
             </div>
           </div>
           <div className="body">
-            <img src={AntManIMG} alt="Man Jumping" />
+            <img src={ANTMANPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Ant-Man and the Wasp: Quantumania</h3>
@@ -130,7 +131,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/avatarpot.jpg" alt="Man Jumping" />
+            <img src={AVATARPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Avatar: The Way of Water</h3>
@@ -150,7 +151,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/btpot.jpg" alt="Man Jumping" />
+            <img src={BTPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Bullet Train</h3>
@@ -170,7 +171,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/batpot.jpg" alt="Man Jumping" />
+            <img src={BATPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>The Batman</h3>
@@ -190,7 +191,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/fastxpot.jpg" alt="Man Jumping" />
+            <img src={FASTXPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Fast X</h3>
@@ -203,7 +204,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/nfspot.jpg" alt="Man Jumping" />
+            <img src={NFSPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Need for Speed</h3>
@@ -223,7 +224,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/jwpot.jpg" alt="Man Jumping" />
+            <img src={JWPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>John Wick: Chapter 4</h3>
@@ -243,7 +244,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/fordvferraripot.jpg" alt="Man Jumping" />
+            <img src={FORDFERARRIPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Ford v Ferrari</h3>
@@ -263,7 +264,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/conjuringpot.jpg" alt="Man Jumping" />
+            <img src={CONJURINGPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>The Conjuring</h3>
@@ -283,7 +284,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/hustlepot.jpg" alt="Man Jumping" />
+            <img src={HUSTLEPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>Hustle</h3>
@@ -303,7 +304,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/twowspot.jpg" alt="Man Jumping" />
+            <img src={TWOWSPOT} alt="Man Jumping" />
             <div className="desc">
               <span>Movie</span>
               <h3>The Wolf of Wall Street</h3>
@@ -323,7 +324,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src="Images/thelastofuspot.jpg" alt="Man Jumping" />
+            <img src={TLOUPOT} alt="Man Jumping" />
             <div className="desc">
               <span>TV Series</span>
               <h3>The Last of Us</h3>
