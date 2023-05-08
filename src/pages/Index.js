@@ -19,7 +19,7 @@ const Index = () => {
       <div>
         <ul id="nav">
           <li>
-            <a href="Home.js">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="Index.js">Halaman Utama</a>
@@ -100,7 +100,7 @@ const Index = () => {
                 <i className="ri-star-half-line"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="assets/Movie Desc/BP2.html">
+              <a href="MovieDesc/BP2.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -122,7 +122,7 @@ const Index = () => {
                 <i className="ri-star-s-line"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/Ant-Man3.html">
+              <a href="MovieDesc/AntMan3.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -142,7 +142,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/Avatar2.html">
+              <a href="MovieDesc/Avatar2.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -162,7 +162,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/BT.html">
+              <a href="MovieDesc/BT.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -182,7 +182,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/TheBatman.html">
+              <a href="MovieDesc/TheBatman.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -195,7 +195,7 @@ const Index = () => {
             <div className="desc">
               <span>Movie</span>
               <h3>Fast X</h3>
-              <a href="Movie Desc/FastX.html">
+              <a href="MovieDesc/FastX.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -215,7 +215,7 @@ const Index = () => {
                 <i className="ri-star-half-line"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/NFS.html">
+              <a href="MovieDesc/NFS.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -235,7 +235,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/JW4.html">
+              <a href="MovieDesc/JW4.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -255,7 +255,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/fordferrari.html">
+              <a href="MovieDesc/fordferrari.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -275,7 +275,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/conjuring.html">
+              <a href="MovieDesc/conjuring.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -295,7 +295,7 @@ const Index = () => {
                 <i className="ri-star-half-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/hustle.html">
+              <a href="MovieDesc/hustle.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -315,7 +315,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="Movie Desc/thewolfofwallstreet.html">
+              <a href="MovieDesc/thewolfofwallstreet.html">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -335,7 +335,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-half-fill"></i>
               </div>
-              <a href="Movie Desc/thelastofus.html">
+              <a href="MovieDesc/thelastofus.html">
                 <h4>Series Information</h4>
               </a>
             </div>
