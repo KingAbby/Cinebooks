@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+import "../MovieDesc/Movie.css";
+import TWOWSPOT from '../Images/twowspot.jpg';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Movie.css" />
-    <title>The Wolf of Wall street</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-
-<body>
-    <div>
+const thewolfofwallstreet = () => {
+    return (
+        <>
+        <div>
         <ul id="nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="../index.html">Halaman Utama</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="Index.js">Halaman Utama</a></li>
             <li>
                 <select>
                     <option>Genre</option>
@@ -47,12 +37,15 @@
     
     <section id="info">
         <div class="movie">
-            <img src="../Images/twowspot.jpg" width="100%">
+            <img src={TWOWSPOT} style={{width:"100%"}} />
             <h3>The Wolf of Wall Street</h3>
             <h5>Movie</h5>
             <h6>2013</h6>
         </div>
         <div class="desc">
+        <div class="movie-overview">
+              <iframe id="overview" width="800" height="800" src="https://www.youtube.com/embed/iszwuX1AK6A"></iframe>
+            </div>
             <h4>Synopsis</h4>
             <h5>Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.</h5>
             <table>
@@ -87,8 +80,8 @@
         <a href="../Genres/Comedy.html">Comedy</a>
         <a href="../Genres/Crime.html">Crime</a>
     </div>
-</body>
+        </>
+    );
+}
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-</html>
+export default thewolfofwallstreet;

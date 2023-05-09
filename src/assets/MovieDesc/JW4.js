@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+import "../MovieDesc/Movie.css";
+import JW4POT from '../Images/jwpot.jpg';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Movie.css" />
-    <title>John Wick: Chapter 4</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-
-<body>
-    <div>
+const JW4 = () => {
+    return (
+        <>
+        <div>
         <ul id="nav">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <li><a href="../home.html">Home</a></li>
-            <li><a href="../index.html">Halaman Utama</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="Index.js">Halaman Utama</a></li>
             <li>
                 <select>
                     <option>Genre</option>
@@ -47,12 +37,15 @@
     
     <section id="info">
         <div class="movie">
-            <img src="../Images/jwpot.jpg" width="100%">
+            <img src={JW4POT} style={{width:"100%"}} />
             <h3>John Wick: Chapter 4</h3>
             <h5>Movie</h5>
             <h6>2023</h6>
         </div>
         <div class="desc">
+            <div class="movie-overview">
+              <iframe id="overview" width="800" height="800" src="https://www.youtube.com/embed/qEVUtrk8_B4"></iframe>
+            </div>
             <h4>Synopsis</h4>
             <h5>John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.</h5>
             <table>
@@ -87,8 +80,8 @@
         <a href="../Genres/Crime.html">Crime</a>
         <a href="../Genres/Thriller.html">Thriller</a>
     </div>
-</body>
+        </>
+    );
+}
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-</html>
+export default JW4;

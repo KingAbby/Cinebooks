@@ -10,7 +10,7 @@ import FORDFERARRIPOT from '../assets/Images/fordvferraripot.jpg'
 import CONJURINGPOT from '../assets/Images/conjuringpot.jpg'
 import HUSTLEPOT from '../assets/Images/hustlepot.jpg'
 import TWOWSPOT from '../assets/Images/twowspot.jpg'
-import TLOUPOT from '../assets/Images/thelastofuspot.jpg'
+import THELASTOFUSPOT from '../assets/Images/thelastofuspot.jpg'
 
 
 const Index = () => {
@@ -162,7 +162,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/BT.html">
+              <a href="MovieDesc/BT.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -182,7 +182,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/TheBatman.html">
+              <a href="MovieDesc/TheBatman.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -195,7 +195,7 @@ const Index = () => {
             <div className="desc">
               <span>Movie</span>
               <h3>Fast X</h3>
-              <a href="MovieDesc/FastX.html">
+              <a href="MovieDesc/FastX.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -215,7 +215,7 @@ const Index = () => {
                 <i className="ri-star-half-line"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/NFS.html">
+              <a href="MovieDesc/NFS.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -235,7 +235,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/JW4.html">
+              <a href="MovieDesc/JW4.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -255,7 +255,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/fordferrari.html">
+              <a href="MovieDesc/fordferrari.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -275,7 +275,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/conjuring.html">
+              <a href="MovieDesc/conjuring.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -295,7 +295,7 @@ const Index = () => {
                 <i className="ri-star-half-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/hustle.html">
+              <a href="MovieDesc/hustle.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -315,7 +315,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-s-line"></i>
               </div>
-              <a href="MovieDesc/thewolfofwallstreet.html">
+              <a href="MovieDesc/thewolfofwallstreet.js">
                 <h4>Movie Information</h4>
               </a>
             </div>
@@ -324,7 +324,7 @@ const Index = () => {
             </a>
           </div>
           <div className="body">
-            <img src={TLOUPOT} alt="Man Jumping" />
+            <img src={THELASTOFUSPOT} alt="Man Jumping" />
             <div className="desc">
               <span>TV Series</span>
               <h3>The Last of Us</h3>
@@ -335,7 +335,7 @@ const Index = () => {
                 <i className="ri-star-fill"></i>
                 <i className="ri-star-half-fill"></i>
               </div>
-              <a href="MovieDesc/thelastofus.html">
+              <a href="MovieDesc/thelastofus.js">
                 <h4>Series Information</h4>
               </a>
             </div>

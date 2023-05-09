@@ -43,6 +43,9 @@ const Avatar2 = () => {
             <h6>2022</h6>
         </div>
         <div class="desc">
+            <div class="movie-overview">
+                <iframe id="overview" width="800" height="800" src="https://www.youtube.com/embed/d9MyW72ELq0"></iframe>
+            </div>
             <h4>Synopsis</h4>
             <h5>Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.</h5>
             <table>

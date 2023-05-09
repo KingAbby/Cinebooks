@@ -1,5 +1,5 @@
 import "../MovieDesc/Movie.css";
-import BPPOT from '../Images/bppot.jpeg'
+import BPPOT from '../Images/bppot.jpeg';
 
 const BP2 = () => {
     return (
