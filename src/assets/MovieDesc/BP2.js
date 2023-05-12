@@ -6,12 +6,9 @@ const BP2 = () => {
         <>
         <div>
         <ul id="nav">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <li><a href="/">Home</a></li>
-            <li><a href="Index.js">Halaman Utama</a></li>
-            <li>
+            <li><a href="../Index.js">Halaman Utama</a></li>
+            <li><a href="../Genre.js">Genre</a></li>
                 <select>
                     <option>Genre</option>
                     <option>Action</option>
@@ -28,9 +25,8 @@ const BP2 = () => {
                     <option>Sport</option>
                     <option>Thriller</option>
                 </select>
-            </li>
-        </ul>
-    </div>
+            </ul>
+        </div>
 <div class="title">
     <h2>Movie Information</h2>
 </div>

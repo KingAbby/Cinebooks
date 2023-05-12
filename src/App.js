@@ -25,6 +25,9 @@ import MovieDesc12 from "./assets/MovieDesc/thewolfofwallstreet";
 function App() {
   return (
     <div className="App">
+      <>
+
+      </>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Index.js" element={<Index />} />

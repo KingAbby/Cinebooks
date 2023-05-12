@@ -4,6 +4,8 @@ body {
 	background-size: cover;
 }
 
+/* Navigations */
+
 #nav {
 	display: flex;
 	align-items: center;
@@ -28,20 +30,6 @@ ul#nav {
 	cursor: grab;
 }
 
-#nav select {
-	background-color: rgb(13, 92, 240);
-	color: wheat;
-}
-
-#nav option {
-	text-decoration: none;
-	font-size: 20px;
-	padding: 10px 0;
-	color: wheat;
-	font-weight: bold;
-	transition: 0.5s ease;
-}
-
 ul#nav li a {
 	text-decoration: none;
 	font-size: 20px;
@@ -54,6 +42,49 @@ ul#nav li a {
 ul#nav li a:hover {
 	color: whitesmoke;
 	border-bottom: 5px solid wheat;
+}
+
+/*Search Bar*/
+
+#searchbar {
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px 0;
+	color: wheat;
+	font-weight: bold;
+	transition: 0.5s ease;
+}
+
+input {
+    color: black;
+    background-color: wheat;
+    font-weight: lighter;
+    border-radius: 7px;
+    border-color: rgb(249, 221, 168);
+    padding: 3px ;
+	margin-right: 1em;
+}
+
+input:hover {
+    color: aqua;
+    background-color: blueviolet;
+    border-radius: 7px;
+    padding: 3px;
+}
+
+#genreSelect {
+	background-color: aqua;
+	color: wheat;
+	text-decoration: none;
+	font-size: 20px;
+	padding: 10px 0;
+	font-weight: bold;
+	transition: 0.5s ease;
+	border-radius: 0.5em;
+}
+
+#genreSelect option {
+	background-color: black;
 }
 
 /*Dropdown Menu */

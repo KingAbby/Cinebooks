@@ -1,17 +1,16 @@
-import BPPOT from '../assets/Images/bppot.jpeg'
-import ANTMANPOT from '../assets/Images/antmanpot.png'
-import AVATARPOT from '../assets/Images/avatarpot.jpg'
-import BTPOT from '../assets/Images/btpot.jpg'
-import BATPOT from '../assets/Images/batpot.jpg'
-import FASTXPOT from '../assets/Images/fastxpot.jpg'
-import NFSPOT from '../assets/Images/nfspot.jpg'
-import JWPOT from '../assets/Images/jwpot.jpg'
-import FORDFERARRIPOT from '../assets/Images/fordvferraripot.jpg'
-import CONJURINGPOT from '../assets/Images/conjuringpot.jpg'
-import HUSTLEPOT from '../assets/Images/hustlepot.jpg'
-import TWOWSPOT from '../assets/Images/twowspot.jpg'
-import THELASTOFUSPOT from '../assets/Images/thelastofuspot.jpg'
-
+import BPPOT from "../assets/Images/bppot.jpeg";
+import ANTMANPOT from "../assets/Images/antmanpot.png";
+import AVATARPOT from "../assets/Images/avatarpot.jpg";
+import BTPOT from "../assets/Images/btpot.jpg";
+import BATPOT from "../assets/Images/batpot.jpg";
+import FASTXPOT from "../assets/Images/fastxpot.jpg";
+import NFSPOT from "../assets/Images/nfspot.jpg";
+import JWPOT from "../assets/Images/jwpot.jpg";
+import FORDFERARRIPOT from "../assets/Images/fordvferraripot.jpg";
+import CONJURINGPOT from "../assets/Images/conjuringpot.jpg";
+import HUSTLEPOT from "../assets/Images/hustlepot.jpg";
+import TWOWSPOT from "../assets/Images/twowspot.jpg";
+import THELASTOFUSPOT from "../assets/Images/thelastofuspot.jpg";
 
 const Index = () => {
   return (
@@ -24,10 +23,8 @@ const Index = () => {
           <li>
             <a href="Index.js">Halaman Utama</a>
           </li>
-          <li>
-            <a href="Genre.js">Genre</a>
-          </li>
-          <select>
+          <div id="searchbar">Search: <input type="search" /> </div>
+          <select id="genreSelect">
             <option>Genre</option>
             <option>Action</option>
             <option>Adventure</option>
@@ -50,19 +47,19 @@ const Index = () => {
         <div className="slideshow-container">
           {/* <!-- Full-width images with number and caption text --> */}
           <div className="mySlides fade">
-            <img src="Images/antman.png" style={{width:"100%"}} />
+            <img src="Images/antman.png" style={{ width: "100%" }} />
           </div>
 
           <div className="mySlides fade">
-            <img src="images/gethard.png" style={{width:"100%"}} />
+            <img src="images/gethard.png" style={{ width: "100%" }} />
           </div>
 
           <div className="mySlides fade">
-            <img src="images/megan.png" style={{width:"100%"}} />
+            <img src="images/megan.png" style={{ width: "100%" }} />
           </div>
 
           <div className="mySlides fade">
-            <img src="images/shazam.png" style={{width:"100%"}} />
+            <img src="images/shazam.png" style={{ width: "100%" }} />
           </div>
 
           {/* <!-- Next and previous buttons --> */}
@@ -77,7 +74,7 @@ const Index = () => {
           <br />
 
           {/* <!-- The dots/circles --> */}
-          <div style={{textAlign:"center"}}>
+          <div style={{ textAlign: "center" }}>
             <span className="dot" onclick="currentSlide(1)"></span>
             <span className="dot" onclick="currentSlide(2)"></span>
             <span className="dot" onclick="currentSlide(3)"></span>
