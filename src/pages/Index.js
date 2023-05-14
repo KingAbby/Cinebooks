@@ -1,3 +1,7 @@
+import React from "react";
+import Nav from "../assets/MovieDesc/Nav";
+import "../style.css";
+import { useNavigate } from "react-router-dom";
 import BPPOT from "../assets/Images/bppot.jpeg";
 import ANTMANPOT from "../assets/Images/antmanpot.png";
 import AVATARPOT from "../assets/Images/avatarpot.jpg";
@@ -17,35 +21,38 @@ import MEGAN from "../assets/Images/megan.png";
 import SHAZAM from "../assets/Images/shazam.png";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const [movieData, setMovieData] = React.useState([]);
+  const getApi = async () => {
+    try {
+      const response = await fetch(
+        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1'",
+        {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2N2I1NmU2ZmQzZWY0NDNiM2EyNGQxZmU2ODI0Yzc1NiIsInN1YiI6IjY0NjBhYjc3YTY3MjU0MDBlM2QxYzNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mF92dZ4Jll99QJNHWJYX4yiFPckV6iqo87gpDowtOAs",
+          },
+        } // *GET, POST, PUT, DELETE, etc.}
+      );
+      const data = await response.json();
+      setMovieData([...data?.results]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  React.useEffect(() => {
+    getApi();
+  }, []);
+
+  const handleToDetail = (id) => {
+    navigate(`/detail/${id}`);
+  };
+
   return (
     <>
-      <div>
-        <ul id="nav">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="Index.js">Halaman Utama</a>
-          </li>
-          <div id="searchbar">Search: <input type="search" /> </div>
-          <select id="genreSelect">
-            <option>Genre</option>
-            <option>Action</option>
-            <option>Adventure</option>
-            <option>Biography</option>
-            <option>Comedy</option>
-            <option>Crime</option>
-            <option>Drama</option>
-            <option>Fantasy</option>
-            <option>Horror</option>
-            <option>Mystery</option>
-            <option>Romance</option>
-            <option>Sci-Fi</option>
-            <option>Sport</option>
-            <option>Thriller</option>
-          </select>
-        </ul>
-      </div>
+      <Nav home={true} />
 
       <section>
         <div className="slideshow-container">
@@ -86,266 +93,36 @@ const Index = () => {
         </div>
       </section>
 
-
-
       <section id="card">
         <h2>Movie Selection</h2>
         <div className="card-body">
-          <div className="body">
-            <img src={BPPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Black Panther: Wakanda Forever</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-half-line"></i>
-                <i className="ri-star-s-line"></i>
+          {movieData.map((item, index) => (
+            <div className="body" key={item.id}>
+              <img
+                src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                alt={item.title}
+              />
+              <div className="desc">
+                <span>Movie</span>
+                <h3>{item.title}</h3>
+                <div className="star">
+                  <i className="ri-star-fill"></i>
+                  <i className="ri-star-fill"></i>
+                  <i className="ri-star-fill"></i>
+                  <i className="ri-star-half-line"></i>
+                  <i className="ri-star-s-line"></i>
+                </div>
+                <h4 onClick={() => handleToDetail(item.id)}>
+                  Movie Information
+                </h4>
               </div>
-              <a href="MovieDesc/BP2.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <div className="youtube-play">
-              <a href="youtube.html">
-                <i className="ri-play-circle-line play"></i>
-              </a>
-            </div>
-          </div>
-          <div className="body">
-            <img src={ANTMANPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Ant-Man and the Wasp: Quantumania</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-                <i className="ri-star-s-line"></i>
+              <div className="youtube-play">
+                <a href="youtube.html">
+                  <i className="ri-play-circle-line play"></i>
+                </a>
               </div>
-              <a href="MovieDesc/AntMan3.js">
-                <h4>Movie Information</h4>
-              </a>
             </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={AVATARPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Avatar: The Way of Water</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/Avatar2.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={BTPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Bullet Train</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/BT.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={BATPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>The Batman</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/TheBatman.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={FASTXPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Fast X</h3>
-              <a href="MovieDesc/FastX.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={NFSPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Need for Speed</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-half-line"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/NFS.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={JWPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>John Wick: Chapter 4</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/JW4.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={FORDFERARRIPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Ford v Ferrari</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/fordferrari.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={CONJURINGPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>The Conjuring</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/conjuring.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={HUSTLEPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>Hustle</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-half-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/hustle.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={TWOWSPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>Movie</span>
-              <h3>The Wolf of Wall Street</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-s-line"></i>
-              </div>
-              <a href="MovieDesc/thewolfofwallstreet.js">
-                <h4>Movie Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
-          <div className="body">
-            <img src={THELASTOFUSPOT} alt="Man Jumping" />
-            <div className="desc">
-              <span>TV Series</span>
-              <h3>The Last of Us</h3>
-              <div className="star">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-half-fill"></i>
-              </div>
-              <a href="MovieDesc/thelastofus.js">
-                <h4>Series Information</h4>
-              </a>
-            </div>
-            <a href="#">
-              <i className="ri-play-circle-line play"></i>
-            </a>
-          </div>
+          ))}
         </div>
       </section>
     </>
@@ -362,8 +139,13 @@ function showSlides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  if (slides[slideIndex - 1]) {
+    slides[slideIndex - 1].style.display = "block";
+  }
+
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
