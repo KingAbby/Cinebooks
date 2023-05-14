@@ -61,6 +61,7 @@ ul#nav li a:hover {
     text-align: center;
     align-items: center;
     color: rgb(13, 92, 240);
+    font-size: 40px;
 }
 
 /*Movie Desc*/
@@ -110,7 +111,7 @@ ul#nav li a:hover {
     font-weight: 500;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: -7em;
+    margin-top: -6em;
     margin-bottom: 50px;
     color: rgb(13, 92, 240);
 }

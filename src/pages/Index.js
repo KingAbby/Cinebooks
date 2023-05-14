@@ -11,6 +11,10 @@ import CONJURINGPOT from "../assets/Images/conjuringpot.jpg";
 import HUSTLEPOT from "../assets/Images/hustlepot.jpg";
 import TWOWSPOT from "../assets/Images/twowspot.jpg";
 import THELASTOFUSPOT from "../assets/Images/thelastofuspot.jpg";
+import ANTMAN from "../assets/Images/antman.png";
+import GETHARD from "../assets/Images/gethard.png";
+import MEGAN from "../assets/Images/megan.png";
+import SHAZAM from "../assets/Images/shazam.png";
 
 const Index = () => {
   return (
@@ -47,19 +51,19 @@ const Index = () => {
         <div className="slideshow-container">
           {/* <!-- Full-width images with number and caption text --> */}
           <div className="mySlides fade">
-            <img src="Images/antman.png" style={{ width: "100%" }} />
+            <img src={ANTMAN} style={{ width: "100%" }} />
           </div>
 
           <div className="mySlides fade">
-            <img src="images/gethard.png" style={{ width: "100%" }} />
+            <img src={GETHARD} style={{ width: "100%" }} />
           </div>
 
           <div className="mySlides fade">
-            <img src="images/megan.png" style={{ width: "100%" }} />
+            <img src={MEGAN} style={{ width: "100%" }} />
           </div>
 
           <div className="mySlides fade">
-            <img src="images/shazam.png" style={{ width: "100%" }} />
+            <img src={SHAZAM} style={{ width: "100%" }} />
           </div>
 
           {/* <!-- Next and previous buttons --> */}
@@ -81,6 +85,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+
 
       <section id="card">
         <h2>Movie Selection</h2>
@@ -345,5 +351,20 @@ const Index = () => {
     </>
   );
 };
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
 
 export default Index;
