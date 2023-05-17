@@ -1,12 +1,14 @@
 body {
-  background: url(../Images/bacg.jpg) no-repeat center fixed;
+  background-color: #111016;
   -webkit-background-size: cover;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 /*Nav-Bar*/
 #nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 7% auto;
   align-items: center;
   justify-content: flex-end;
   z-index: 999;
@@ -19,7 +21,7 @@ ul#nav {
   margin: -8px -1em;
   margin-bottom: 3em;
   padding: 20px 2em;
-  background-image: linear-gradient(to left, rgb(13, 92, 240), black);
+  background-image: linear-gradient(to left, #CCF381, #000000);
 }
 
 #nav li {
@@ -30,15 +32,17 @@ ul#nav {
 }
 
 #nav select {
-  background-color: rgb(13, 92, 240);
-  color: wheat;
+  background-color: #CCF381;
+  color: #111016;
+  font-weight: bold;
+  font-size: medium;
 }
 
 #nav option {
   text-decoration: none;
   font-size: 20px;
   padding: 10px 0;
-  color: wheat;
+  color: #111016;
   font-weight: bold;
   transition: 0.5s ease;
 }
@@ -47,27 +51,28 @@ ul#nav li a {
   text-decoration: none;
   font-size: 20px;
   padding: 10px 0;
-  color: wheat;
+  color: #111016;
   font-weight: bold;
   transition: 0.5s ease;
 }
 
 ul#nav li a:hover {
   color: whitesmoke;
-  border-bottom: 5px solid wheat;
 }
 
 .title h2 {
   text-align: center;
   align-items: center;
-  color: rgb(13, 92, 240);
+  color: #CCF381;
   font-size: 40px;
 }
 
 /*Movie Desc*/
 #info {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% auto;
   margin-top: 20px;
+  padding-right: 2em;
 }
 
 #info .movie {
@@ -83,8 +88,45 @@ ul#nav li a:hover {
 
 #info .movie img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   float: left;
+  box-shadow: 20px 20px 30px #08070e;
+}
+
+.movie-overview {
+  display: grid;
+  grid-template-columns: auto;
+  border-radius: 10px;
+}
+
+.video-player {
+  border-radius: 10px;
+}
+
+/* .desc {
+  background-color: #4831D4;
+} */
+
+/* Synopsis */
+
+.sinopsis {
+  background-color: #08070e;
+  border-radius: 10px;
+  padding-bottom: 1px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
+}
+
+.deskripsi {
+  color: wheat;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.cast {
+  padding: 0;
 }
 
 #info .desc table {
@@ -113,7 +155,7 @@ ul#nav li a:hover {
   margin-right: 50px;
   margin-top: -6em;
   margin-bottom: 50px;
-  color: rgb(13, 92, 240);
+  color: #CCF381;
 }
 
 /*Movie Genre*/

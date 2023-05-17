@@ -7,9 +7,6 @@ const Genre = () => {
             <a href="Home.js">Home</a>
           </li>
           <li>
-            <a href="/">Halaman Utama</a>
-          </li>
-          <li>
             <select>
               <option href="../Genre.js">Genre</option>
               <option>Action</option>

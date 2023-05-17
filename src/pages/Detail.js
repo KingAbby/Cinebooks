@@ -75,34 +75,26 @@ const Detail = () => {
         <div class="desc">
           <div class="movie-overview">
             {movieData?.youtube_trailer_key && (
-              <ReactPlayer
+              <ReactPlayer className="video-player"
                 url={`https://www.youtube.com/watch?v=${movieData?.youtube_trailer_key}`}
               />
             )}
           </div>
+          <div className="sinopsis">
           <h4 style={{ marginTop: "100px" }}>Synopsis</h4>
           <h5>{movieData.overview}</h5>
-          <table>
-            <tr>
-              <td>Director</td>
-              <td>
-                : {movieData?.directors && movieData?.directors.join(", ")}
-              </td>
-            </tr>
-            <tr>
-              <td>Casts</td>
-              <td>: {movieData?.stars && movieData?.stars.join(", ")}</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                {" "}
-                Michelle Pfeiffer, Kathryn Newton, Katy M. O'Brian, Jamie Andrew
-                Cutler, David Dastmalchian, Mark Weinman, Tom Clark, Nathan
-                Blees, Durassie Kiangangu, Leon Cooke, Ross Mullan, Randall Park
-              </td>
-            </tr>
-          </table>
+          <div className="deskripsi">
+            <div>
+              <strong>Director:</strong> {movieData?.directors && movieData?.directors.join(", ")}
+            </div>
+            <div>
+              <strong class="cast">Casts:</strong> {movieData?.stars && movieData?.stars.join(", ")}
+            </div>
+            <div>
+              {" "}
+            </div>
+          </div>
+        </div>
         </div>
       </section>
       <div class="title">

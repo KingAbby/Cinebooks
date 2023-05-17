@@ -7,9 +7,6 @@ const Nav = ({ home }) => {
         <li>
           <a href="/">Home</a>
         </li>
-        <li>
-          <a href="Index.js">Halaman Utama</a>
-        </li>
         {home && (
           <div id="searchbar">
             Search: <input type="search" />{" "}
