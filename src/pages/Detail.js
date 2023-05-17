@@ -1,5 +1,4 @@
 import "../assets/MovieDesc/Movie.css";
-import ANTMANPOT from "../assets/Images/antman.png";
 import Nav from "../assets/MovieDesc/Nav";
 import { useParams } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -88,7 +87,7 @@ const Detail = () => {
               <strong>Director:</strong> {movieData?.directors && movieData?.directors.join(", ")}
             </div>
             <div>
-              <strong class="cast">Casts:</strong> {movieData?.stars && movieData?.stars.join(", ")}
+              <strong>Casts:</strong> {movieData?.stars && movieData?.stars.join(", ")}
             </div>
             <div>
               {" "}
