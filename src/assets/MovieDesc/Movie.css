@@ -68,6 +68,9 @@ ul#nav li a:hover {
   padding-left: 17em;
 }
 
+/*desc*/
+
+
 
 /* .desc {
   background-color: #4831D4;
@@ -84,7 +87,7 @@ ul#nav li a:hover {
 
 .deskripsi {
   color: wheat;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;
@@ -92,7 +95,7 @@ ul#nav li a:hover {
 }
 
 #info .desc h5 {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;
@@ -102,7 +105,7 @@ ul#nav li a:hover {
 }
 
 #info .desc h4 {
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;

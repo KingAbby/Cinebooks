@@ -6,7 +6,7 @@ import "./style.css";
 import "./assets/MovieDesc/Movie.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Index from "./pages/index";
+import Index from "./pages/Index";
 import Genre from "./pages/Genre";
 import MovieDesc0 from "./assets/MovieDesc/BP2";
 import MovieDesc1 from "./assets/MovieDesc/AntMan3";
