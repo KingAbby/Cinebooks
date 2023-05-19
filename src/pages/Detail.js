@@ -80,30 +80,30 @@ const Detail = () => {
             )}
           </div>
           <div className="sinopsis">
-          <h4 style={{ marginTop: "100px" }}>Synopsis</h4>
-          <h5>{movieData.overview}</h5>
-          <div className="deskripsi">
-            <div>
-              <strong>Director:</strong> {movieData?.directors && movieData?.directors.join(", ")}
+            <h4 style={{ marginTop: "100px" }}>Synopsis</h4>
+            <h5>{movieData.overview}</h5>
+            <div className="deskripsi">
+              <div>
+                <strong>Director:</strong> {movieData?.directors && movieData?.directors.join(", ")}
+              </div>
+              <div>
+               <strong>Casts:</strong> {movieData?.stars && movieData?.stars.join(", ")}
+              </div>
+              <div>
+               {" "}
+              </div>
             </div>
-            <div>
-              <strong>Casts:</strong> {movieData?.stars && movieData?.stars.join(", ")}
-            </div>
-            <div>
-              {" "}
+          </div>
+          <div className="genre">
+            <h4 style={{ marginTop: "100px" }}>Genre:</h4>
+            <div className="category">
+              <a href="../Genres/Action.html">Action</a>
+              <a href="../Genres/Adventure.html">Adventure</a>
+              <a href="../Genres/Comedy.html">Comedy</a>
             </div>
           </div>
         </div>
-        </div>
       </section>
-      <div class="title">
-        <h4>Genre:</h4>
-      </div>
-      <div class="genre">
-        <a href="../Genres/Action.html">Action</a>
-        <a href="../Genres/Adventure.html">Adventure</a>
-        <a href="../Genres/Comedy.html">Comedy</a>
-      </div>
     </>
   );
 };
