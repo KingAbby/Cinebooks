@@ -8,8 +8,8 @@ body {
 /* Nav-Bar */
 
 #nav {
-	display: grid;
-	grid-template-columns: 7% auto;
+	display: flex;
+	justify-content: flex-end;
 	align-items: center;
 	justify-content: flex-end;
 	z-index: 999;
@@ -118,7 +118,7 @@ input:hover {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+  max-width: 70%;
   position: relative;
   margin: auto;
 }

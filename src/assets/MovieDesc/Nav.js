@@ -12,7 +12,6 @@ const Nav = ({ home }) => {
             Search: <input type="search" />{" "}
           </div>
         )}
-
         <li>
           <select>
             <option>Genre</option>
