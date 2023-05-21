@@ -3,13 +3,13 @@ import React from "react";
 const Nav = ({ home, searchByText, selectGenre, genre, searchText }) => {
   const handleOnChangeText = (e) => {
     selectGenre(false);
-    searchByText(e.target.value);
+    searchByText(e);
   };
   const handleOnChangeGenre = (e) => {
     if (searchText !== "") {
       searchByText("");
     }
-    selectGenre(e.target.value);
+    selectGenre(e);
   };
   return (
     <div>

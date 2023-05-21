@@ -1,7 +1,7 @@
 /* Genre Dropdown */
 
 #nav select {
-  background-color: #CCF381;
+  background-color: #ccf381;
   color: #111016;
   font-weight: bold;
   font-size: medium;
@@ -25,7 +25,7 @@ ul#nav li a:hover {
 .title h2 {
   text-align: center;
   align-items: center;
-  color: #CCF381;
+  color: #ccf381;
   font-size: 40px;
 }
 
@@ -47,7 +47,7 @@ ul#nav li a:hover {
   cursor: pointer;
   margin: 15px 20px;
   transition: 0.2s ease;
-  color: #CCF381;
+  color: #ccf381;
   background-color: #08070e;
   border-radius: 20px;
   margin-bottom: 20em;
@@ -69,8 +69,6 @@ ul#nav li a:hover {
 }
 
 /*desc*/
-
-
 
 /* .desc {
   background-color: #4831D4;
@@ -111,7 +109,7 @@ ul#nav li a:hover {
   margin-right: 50px;
   margin-top: -6em;
   margin-bottom: 50px;
-  color: #CCF381;
+  color: #ccf381;
 }
 
 /*Movie Genre*/
@@ -120,7 +118,7 @@ ul#nav li a:hover {
   border-radius: 10px;
   padding-bottom: 1px;
   box-shadow: 10px 10px 30px #df3375;
-  color: #CCF381;
+  color: #ccf381;
   margin-bottom: 10px;
   margin-right: 29em;
 }
@@ -133,13 +131,13 @@ ul#nav li a:hover {
   display: flex;
 }
 
-.category a {
+.category div {
   padding: 20px 60px 20px 60px;
   font-weight: bold;
   border-radius: 10px;
   font-size: medium;
   background-color: transparent;
-  color: #CCF381;
+  color: #ccf381;
   cursor: pointer;
   border: 2.5px solid #df3375;
   border-radius: 20px;
@@ -147,9 +145,9 @@ ul#nav li a:hover {
   margin: -20px -10px 20px 50px;
 }
 
-.category a:hover {
+.category div:hover {
   color: wheat;
-  background-image: linear-gradient(to left, #CCF381, black);
+  background-image: linear-gradient(to left, #ccf381, black);
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 1);
   transition: 0.5s ease;
 }
@@ -171,4 +169,47 @@ ul#nav li a:hover {
   width: 70%;
   height: 45%;
   border: none;
+}
+
+.lds-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25em;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #ccf381;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ccf381 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,120 +1,121 @@
 body {
-	background-color: #111016;
-	-webkit-background-size: cover;
-	background-size: cover;
-	overflow-x: hidden;
+  background-color: #111016;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
 /* Nav-Bar */
 
 #nav {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	justify-content: flex-end;
-	z-index: 999;
-	position: sticky;
-	top: 0;
-	left: 0;
-  }
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
 
 ul#nav {
-	margin: -8px -1em;
-	margin-bottom: 3em;
-	padding: 20px 2em;
-	background-image: linear-gradient(to left, #CCF381, #000000);
-  }
+  margin: -8px -1em;
+  margin-bottom: 3em;
+  padding: 20px 2em;
+  background-image: linear-gradient(to left, #ccf381, #000000);
+}
 
 #nav li {
-	list-style: none;
-	padding: 0 20px;
-	margin-right: 20px;
-	cursor: grab;
+  list-style: none;
+  padding: 0 20px;
+  margin-right: 20px;
+  cursor: grab;
 }
 
 ul#nav li a {
-	text-decoration: none;
-	font-size: 20px;
-	padding: 10px 0;
-	color: #111016;
-	font-weight: bold;
-	transition: 0.5s ease;
-  }
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #111016;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
 
 ul#nav li a:hover {
-	color: #080305;
-	border-bottom: 5px solid rgb(10, 7, 2);
+  color: #080305;
+  border-bottom: 5px solid rgb(10, 7, 2);
 }
 
 /*Search Bar*/
 
 #searchbar {
-	text-decoration: none;
-	font-size: 20px;
-	padding: 10px 0;
-	color: #111016;
-	font-weight: bold;
-	transition: 0.5s ease;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #111016;
+  font-weight: bold;
+  transition: 0.5s ease;
 }
 
 input {
-    color: #CCF381;
-    background-color: #111016;
-    font-weight: bold;
-    border-radius: 7px;
-    border-color: rgb(249, 221, 168);
-    padding: 3px ;
-	margin-right: 1em;
+  color: #ccf381;
+  background-color: #111016;
+  font-weight: bold;
+  border-radius: 7px;
+  border-color: rgb(249, 221, 168);
+  padding: 3px;
+  margin-right: 1em;
 }
 
 input:hover {
-    color: #111016;
-    background-color: #eee;
-    border-radius: 7px;
-    padding: 3px;
+  color: #111016;
+  background-color: #eee;
+  border-radius: 7px;
+  padding: 3px;
 }
 
 /*Dropdown Menu */
 
 .dropbtn {
-	padding: 16px;
-	font-size: 16px;
-	border: none;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
 
-
 #nav .dropdown-menu {
-	display: none;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-menu li {
-	padding: 0 10px;
+  padding: 0 10px;
 }
 
 .dropdown-menu a {
-	color: #333;
-	text-decoration: none;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-menu li:hover {
-	background-color: #eee;
+  background-color: #eee;
 }
 
 .nav-links li:hover .dropdown-menu {
-	display: block;
+  display: block;
 }
 
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -130,16 +131,21 @@ input:hover {
 
 /* Fading animation */
 .fade {
-	animation: fade 1.5s;
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
   }
-  
-  @keyframes fade {
-	from {opacity: .4}
-	to {opacity: 1}
+  to {
+    opacity: 1;
   }
+}
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -158,8 +164,9 @@ input:hover {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Position the "next button" to the right */
@@ -201,84 +208,127 @@ input:hover {
 }
 
 .dot.active {
-	background-color: #717171;
+  background-color: #717171;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
 /*Card*/
 #card {
-	text-align: center;
+  text-align: center;
 }
 
 #card .card-body {
-	display: grid;
-	grid-template-columns: auto auto auto auto;
-	grid-template-rows: auto auto;
-	margin: 0 auto;
-	;
-	grid-gap: 5px 2px;
-	margin-left: 15px;
-	padding-top: 20px;
-	flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  margin: 0 auto;
+  grid-gap: 5px 2px;
+  margin-left: 15px;
+  padding-top: 20px;
+  flex-wrap: wrap;
 }
 
 #card h2 {
-	color: #CCF381;
+  color: #ccf381;
 }
 
 #card .body {
-	width: 20%;
-	min-width: 250px;
-	padding: 10px 12px;
-	border: 2.5px solid #df3375;
-	background-color: #CCF381;
-	border-radius: 20px;
-	cursor: pointer;
-	box-shadow: 20px 20px 30px rgba(255, 255, 255, 0.02);
-	margin: 15px 0;
-	transition: 0.2s ease;
-	position: relative;
+  width: 20%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 2.5px solid #df3375;
+  background-color: #ccf381;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(255, 255, 255, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
 }
 
 #card .body:hover {
-	box-shadow: 20px 20px 30px #df3375;
-	background-color: #CCF381;
-	transform: scale(1.1);
-	z-index: 2;
+  box-shadow: 20px 20px 30px #df3375;
+  background-color: #ccf381;
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 #card .body img {
-	width: 100%;
-	border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 #card .body .desc {
-	text-align: start;
-	padding: 10px 0;
+  text-align: start;
+  padding: 10px 0;
 }
 
 /* Card Text */
 #card .body .desc span {
-	color: red;
-	font-size: 15px;
+  color: red;
+  font-size: 15px;
 }
 
 #card .body .desc h3 {
-	padding-top: 7px;
-	color: #111016;
+  padding-top: 7px;
+  color: #111016;
 }
 
 #card .body .desc h4 {
-	font-size: 15px;
-	font-weight: 700;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 #card .body .desc h4:hover {
-	color: black;
-	border-bottom: 3px solid;
-	width: 62%;
-	transition: 0.05s ease;
+  color: black;
+  border-bottom: 3px solid;
+  width: 62%;
+  transition: 0.05s ease;
+}
+
+.lds-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25em;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #ccf381;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #ccf381 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

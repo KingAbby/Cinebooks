@@ -2,23 +2,11 @@ import React from "react";
 import Nav from "../assets/MovieDesc/Nav";
 import "../style.css";
 import { useNavigate } from "react-router-dom";
-import BPPOT from "../assets/Images/bppot.jpeg";
-import ANTMANPOT from "../assets/Images/antmanpot.png";
-import AVATARPOT from "../assets/Images/avatarpot.jpg";
-import BTPOT from "../assets/Images/btpot.jpg";
-import BATPOT from "../assets/Images/batpot.jpg";
-import FASTXPOT from "../assets/Images/fastxpot.jpg";
-import NFSPOT from "../assets/Images/nfspot.jpg";
-import JWPOT from "../assets/Images/jwpot.jpg";
-import FORDFERARRIPOT from "../assets/Images/fordvferraripot.jpg";
-import CONJURINGPOT from "../assets/Images/conjuringpot.jpg";
-import HUSTLEPOT from "../assets/Images/hustlepot.jpg";
-import TWOWSPOT from "../assets/Images/twowspot.jpg";
-import THELASTOFUSPOT from "../assets/Images/thelastofuspot.jpg";
 import ANTMAN from "../assets/Images/antman.png";
 import GETHARD from "../assets/Images/gethard.png";
 import MEGAN from "../assets/Images/megan.png";
 import SHAZAM from "../assets/Images/shazam.png";
+import defaultPicture from "../assets/Images/default.png";
 import { debounce } from "lodash";
 
 const Index = () => {
@@ -78,49 +66,55 @@ const Index = () => {
         genre={genre}
         searchText={searchText}
       />
+      <section>
+        <div className="slideshow-container">
+          {/* <!-- Full-width images with number and caption text --> */}
+          <div className="mySlides fade">
+            <img src={ANTMAN} style={{ width: "100%" }} />
+          </div>
+
+          <div className="mySlides fade">
+            <img src={GETHARD} style={{ width: "100%" }} />
+          </div>
+
+          <div className="mySlides fade">
+            <img src={MEGAN} style={{ width: "100%" }} />
+          </div>
+
+          <div className="mySlides fade">
+            <img src={SHAZAM} style={{ width: "100%" }} />
+          </div>
+
+          {/* <!-- Next and previous buttons --> */}
+          <div>
+            <a className="prev" onclick="plusSlides(-1)">
+              &#10094;
+            </a>
+            <a className="next" onclick="plusSlides(1)">
+              &#10095;
+            </a>
+          </div>
+          <br />
+
+          {/* <!-- The dots/circles --> */}
+          <div style={{ textAlign: "center" }}>
+            <span className="dot" onclick="currentSlide(1)"></span>
+            <span className="dot" onclick="currentSlide(2)"></span>
+            <span className="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
       {isLoading ? (
-        <>Loading...</>
+        <div className="lds-container">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       ) : (
         <>
-          <section>
-            <div className="slideshow-container">
-              {/* <!-- Full-width images with number and caption text --> */}
-              <div className="mySlides fade">
-                <img src={ANTMAN} style={{ width: "100%" }} />
-              </div>
-
-              <div className="mySlides fade">
-                <img src={GETHARD} style={{ width: "100%" }} />
-              </div>
-
-              <div className="mySlides fade">
-                <img src={MEGAN} style={{ width: "100%" }} />
-              </div>
-
-              <div className="mySlides fade">
-                <img src={SHAZAM} style={{ width: "100%" }} />
-              </div>
-
-              {/* <!-- Next and previous buttons --> */}
-              <div>
-                <a className="prev" onclick="plusSlides(-1)">
-                  &#10094;
-                </a>
-                <a className="next" onclick="plusSlides(1)">
-                  &#10095;
-                </a>
-              </div>
-              <br />
-
-              {/* <!-- The dots/circles --> */}
-              <div style={{ textAlign: "center" }}>
-                <span className="dot" onclick="currentSlide(1)"></span>
-                <span className="dot" onclick="currentSlide(2)"></span>
-                <span className="dot" onclick="currentSlide(3)"></span>
-              </div>
-            </div>
-          </section>
-
           <section id="card">
             <h2>Movie Selection</h2>
             <div className="card-body">
@@ -132,7 +126,7 @@ const Index = () => {
                       alt={item.title}
                     />
                   ) : (
-                    <>diganti nnati</>
+                    <img src={defaultPicture} alt={item.title} />
                   )}
 
                   <div className="desc">

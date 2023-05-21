@@ -1,13 +1,14 @@
 import "../assets/MovieDesc/Movie.css";
 import Nav from "../assets/MovieDesc/Nav";
 import { useParams } from "react-router-dom";
-import React, { useEffect } from "react";
+import React from "react";
 import ReactPlayer from "react-player/lazy";
 
 const Detail = () => {
   const { id } = useParams();
   const [movieData, setMovieData] = React.useState({});
   const [isLoading, setLoading] = React.useState(false);
+
   const getApi = async () => {
     setLoading(true);
     let newData = {};
@@ -50,60 +51,70 @@ const Detail = () => {
     getApi();
   }, []);
 
-  if (isLoading) {
-    return <>loading</>;
-  }
   return (
     <>
       <Nav />
       <div class="title">
         <h2>Movie Information</h2>
       </div>
-
-      <section id="info">
-        <div class="movie">
-          <img
-            src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`}
-            style={{ width: "100%" }}
-            alt={movieData.title}
-          />
-          <h3>{movieData.title}</h3>
-          <h5>Movie</h5>
-          <h6>{movieData.year}</h6>
+      {isLoading ? (
+        <div className="lds-container">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-        <div class="desc">
-          <div class="movie-overview">
-            {movieData?.youtube_trailer_key && (
-              <ReactPlayer className="video-player"
-                url={`https://www.youtube.com/watch?v=${movieData?.youtube_trailer_key}`}
+      ) : (
+        <>
+          <section id="info">
+            <div class="movie">
+              <img
+                src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`}
+                style={{ width: "100%" }}
+                alt={movieData.title}
               />
-            )}
-          </div>
-          <div className="sinopsis">
-            <h4 style={{ marginTop: "100px" }}>Synopsis</h4>
-            <h5>{movieData.overview}</h5>
-            <div className="deskripsi">
-              <div>
-                <strong>Director:</strong> {movieData?.directors && movieData?.directors.join(", ")}
+              <h3>{movieData.title}</h3>
+              <h5>Movie</h5>
+              <h6>{movieData.year}</h6>
+            </div>
+            <div class="desc">
+              <div class="movie-overview">
+                {movieData?.youtube_trailer_key && (
+                  <ReactPlayer
+                    className="video-player"
+                    url={`https://www.youtube.com/watch?v=${movieData?.youtube_trailer_key}`}
+                  />
+                )}
               </div>
-              <div>
-                <strong>Casts:</strong> {movieData?.stars && movieData?.stars.join(", ")}
+              <div className="sinopsis">
+                <h4 style={{ marginTop: "100px" }}>Synopsis</h4>
+                <h5>{movieData.overview}</h5>
+                <div className="deskripsi">
+                  <div>
+                    <strong>Director:</strong>{" "}
+                    {movieData?.directors && movieData?.directors.join(", ")}
+                  </div>
+                  <div>
+                    <strong>Casts:</strong>{" "}
+                    {movieData?.stars && movieData?.stars.join(", ")}
+                  </div>
+                  <div> </div>
+                </div>
               </div>
-              <div>
-                {" "}
+              <div className="genre">
+                <h4>Genres:</h4>
+                <div className="category">
+                  {movieData?.genres?.map((item) => (
+                    <div key={item}>{item}</div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="genre">
-            <h4>Genre:</h4>
-            <div class="category">
-              <a href="../Genres/Action.html">Action</a>
-              <a href="../Genres/Adventure.html">Adventure</a>
-              <a href="../Genres/Comedy.html">Comedy</a>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </>
+      )}
     </>
   );
 };
