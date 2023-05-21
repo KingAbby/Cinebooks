@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes as Switch } from "react-router-dom";
-import Home from "./pages/Index";
+import Home from "./pages/index";
 import Detail from "./pages/Detail";
 
 const Routes = () => {

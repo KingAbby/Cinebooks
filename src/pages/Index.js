@@ -19,32 +19,51 @@ import ANTMAN from "../assets/Images/antman.png";
 import GETHARD from "../assets/Images/gethard.png";
 import MEGAN from "../assets/Images/megan.png";
 import SHAZAM from "../assets/Images/shazam.png";
+import { debounce } from "lodash";
 
 const Index = () => {
   const navigate = useNavigate();
   const [movieData, setMovieData] = React.useState([]);
+  const [genre, setGenre] = React.useState(false);
+  const [searchText, setSearchText] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const handleChangeText = (text) => {
+    setSearchText(text);
+  };
+  const debouncedSearch = React.useMemo(
+    () => debounce(handleChangeText, 300),
+    []
+  );
   const getApi = async () => {
+    setIsLoading(true);
     try {
-      const response = await fetch(
-        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1'",
-        {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2N2I1NmU2ZmQzZWY0NDNiM2EyNGQxZmU2ODI0Yzc1NiIsInN1YiI6IjY0NjBhYjc3YTY3MjU0MDBlM2QxYzNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mF92dZ4Jll99QJNHWJYX4yiFPckV6iqo87gpDowtOAs",
-          },
-        } // *GET, POST, PUT, DELETE, etc.}
-      );
+      let url =
+        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+      if (genre !== false) {
+        url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${genre}`;
+      } else if (searchText !== "") {
+        url = `https://api.themoviedb.org/3/search/movie?query=${searchText}&include_adult=false&language=en-US&page=1`;
+      }
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2N2I1NmU2ZmQzZWY0NDNiM2EyNGQxZmU2ODI0Yzc1NiIsInN1YiI6IjY0NjBhYjc3YTY3MjU0MDBlM2QxYzNmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mF92dZ4Jll99QJNHWJYX4yiFPckV6iqo87gpDowtOAs",
+        },
+      });
       const data = await response.json();
       setMovieData([...data?.results]);
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   };
+
   React.useEffect(() => {
     getApi();
-  }, []);
+  }, [searchText, genre]);
 
   const handleToDetail = (id) => {
     navigate(`/detail/${id}`);
@@ -52,79 +71,95 @@ const Index = () => {
 
   return (
     <>
-      <Nav home={true} />
-
-      <section>
-        <div className="slideshow-container">
-          {/* <!-- Full-width images with number and caption text --> */}
-          <div className="mySlides fade">
-            <img src={ANTMAN} style={{ width: "100%" }} />
-          </div>
-
-          <div className="mySlides fade">
-            <img src={GETHARD} style={{ width: "100%" }} />
-          </div>
-
-          <div className="mySlides fade">
-            <img src={MEGAN} style={{ width: "100%" }} />
-          </div>
-
-          <div className="mySlides fade">
-            <img src={SHAZAM} style={{ width: "100%" }} />
-          </div>
-
-          {/* <!-- Next and previous buttons --> */}
-          <div>
-            <a className="prev" onclick="plusSlides(-1)">
-              &#10094;
-            </a>
-            <a className="next" onclick="plusSlides(1)">
-              &#10095;
-            </a>
-          </div>
-          <br />
-
-          {/* <!-- The dots/circles --> */}
-          <div style={{ textAlign: "center" }}>
-            <span className="dot" onclick="currentSlide(1)"></span>
-            <span className="dot" onclick="currentSlide(2)"></span>
-            <span className="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>
-      </section>
-
-      <section id="card">
-        <h2>Movie Selection</h2>
-        <div className="card-body">
-          {movieData.map((item, index) => (
-            <div className="body" key={item.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-                alt={item.title}
-              />
-              <div className="desc">
-                <span>Movie</span>
-                <h3>{item.title}</h3>
-                <div className="star">
-                  <i className="ri-star-fill"></i>
-                  <i className="ri-star-fill"></i>
-                  <i className="ri-star-fill"></i>
-                  <i className="ri-star-half-line"></i>
-                  <i className="ri-star-s-line"></i>
-                </div>
-                <h4 onClick={() => handleToDetail(item.id)}>
-                  Movie Information
-                </h4>
+      <Nav
+        home={true}
+        searchByText={debouncedSearch}
+        selectGenre={setGenre}
+        genre={genre}
+        searchText={searchText}
+      />
+      {isLoading ? (
+        <>Loading...</>
+      ) : (
+        <>
+          <section>
+            <div className="slideshow-container">
+              {/* <!-- Full-width images with number and caption text --> */}
+              <div className="mySlides fade">
+                <img src={ANTMAN} style={{ width: "100%" }} />
               </div>
-              <div className="youtube-play">
-                <a href="youtube.html">
-                  <i className="ri-play-circle-line play"></i>
+
+              <div className="mySlides fade">
+                <img src={GETHARD} style={{ width: "100%" }} />
+              </div>
+
+              <div className="mySlides fade">
+                <img src={MEGAN} style={{ width: "100%" }} />
+              </div>
+
+              <div className="mySlides fade">
+                <img src={SHAZAM} style={{ width: "100%" }} />
+              </div>
+
+              {/* <!-- Next and previous buttons --> */}
+              <div>
+                <a className="prev" onclick="plusSlides(-1)">
+                  &#10094;
+                </a>
+                <a className="next" onclick="plusSlides(1)">
+                  &#10095;
                 </a>
               </div>
+              <br />
+
+              {/* <!-- The dots/circles --> */}
+              <div style={{ textAlign: "center" }}>
+                <span className="dot" onclick="currentSlide(1)"></span>
+                <span className="dot" onclick="currentSlide(2)"></span>
+                <span className="dot" onclick="currentSlide(3)"></span>
+              </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+
+          <section id="card">
+            <h2>Movie Selection</h2>
+            <div className="card-body">
+              {movieData.map((item, index) => (
+                <div className="body" key={item.id}>
+                  {item?.poster_path ? (
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                      alt={item.title}
+                    />
+                  ) : (
+                    <>diganti nnati</>
+                  )}
+
+                  <div className="desc">
+                    <span>Movie</span>
+                    <h3>{item.title}</h3>
+                    <div className="star">
+                      <i className="ri-star-fill"></i>
+                      <i className="ri-star-fill"></i>
+                      <i className="ri-star-fill"></i>
+                      <i className="ri-star-half-line"></i>
+                      <i className="ri-star-s-line"></i>
+                    </div>
+                    <h4 onClick={() => handleToDetail(item.id)}>
+                      Movie Information
+                    </h4>
+                  </div>
+                  <div className="youtube-play">
+                    <a href="youtube.html">
+                      <i className="ri-play-circle-line play"></i>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 };
