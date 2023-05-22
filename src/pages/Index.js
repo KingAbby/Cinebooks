@@ -15,13 +15,16 @@ const Index = () => {
   const [genre, setGenre] = React.useState(false);
   const [searchText, setSearchText] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
+
   const handleChangeText = (text) => {
     setSearchText(text);
   };
+
   const debouncedSearch = React.useMemo(
     () => debounce(handleChangeText, 300),
     []
   );
+
   const getApi = async () => {
     setIsLoading(true);
     try {
@@ -56,6 +59,21 @@ const Index = () => {
   const handleToDetail = (id) => {
     navigate(`/detail/${id}`);
   };
+
+  React.useEffect(() => {
+    // Mencegah penggeseran layar pada perangkat mobile
+    const preventTouchMove = (event) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("touchmove", preventTouchMove, {
+      passive: false,
+    });
+
+    return () => {
+      document.removeEventListener("touchmove", preventTouchMove);
+    };
+  }, []);
 
   return (
     <>

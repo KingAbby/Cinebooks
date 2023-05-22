@@ -25,9 +25,7 @@ import MovieDesc12 from "./assets/MovieDesc/thewolfofwallstreet";
 function App() {
   return (
     <div className="App">
-      <>
-
-      </>
+      <></>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Index.js" element={<Index />} />
@@ -44,7 +42,10 @@ function App() {
         <Route path="/MovieDesc/NFS.js" element={<MovieDesc9 />} />
         <Route path="/MovieDesc/TheBatman.js" element={<MovieDesc10 />} />
         <Route path="/MovieDesc/thelastofus.js" element={<MovieDesc11 />} />
-        <Route path="/MovieDesc/thewolfofwallstreet.js" element={<MovieDesc12 />} />
+        <Route
+          path="/MovieDesc/thewolfofwallstreet.js"
+          element={<MovieDesc12 />}
+        />
       </Routes>
     </div>
   );

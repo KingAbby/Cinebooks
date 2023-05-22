@@ -1,13 +1,13 @@
 import "../assets/MovieDesc/Movie.css";
 import Nav from "../assets/MovieDesc/Nav";
 import { useParams } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player/lazy";
 
 const Detail = () => {
   const { id } = useParams();
-  const [movieData, setMovieData] = React.useState({});
-  const [isLoading, setLoading] = React.useState(false);
+  const [movieData, setMovieData] = useState({});
+  const [isLoading, setLoading] = useState(false);
 
   const getApi = async () => {
     setLoading(true);
@@ -47,7 +47,7 @@ const Detail = () => {
       console.log(error);
     }
   };
-  React.useEffect(() => {
+  useEffect(() => {
     getApi();
   }, []);
 
