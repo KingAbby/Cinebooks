@@ -93,11 +93,11 @@ const Detail = () => {
                 <h5>{movieData.overview}</h5>
                 <div className="deskripsi">
                   <div>
-                    <strong>Director:</strong>{" "}
+                    <strong>Director</strong>{" "}
                     {movieData?.directors && movieData?.directors.join(", ")}
                   </div>
                   <div>
-                    <strong>Casts:</strong>{" "}
+                    <strong>Casts</strong>{" "}
                     {movieData?.stars && movieData?.stars.join(", ")}
                   </div>
                   <div> </div>
