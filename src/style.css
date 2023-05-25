@@ -426,6 +426,7 @@ input:hover {
 #card .body .desc {
   text-align: start;
   padding: 10px 0;
+  width: 100%;
 }
 
 /* Card Text */
@@ -497,3 +498,4 @@ input:hover {
     transform: rotate(360deg);
   }
 }
+

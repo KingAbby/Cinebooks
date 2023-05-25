@@ -147,7 +147,7 @@ const Index = () => {
                     <img src={defaultPicture} alt={item.title} />
                   )}
 
-                  <div className="desc">
+                  <div className="desc-home">
                     <span>Movie</span>
                     <h3>{item.title}</h3>
                     <div className="star">
