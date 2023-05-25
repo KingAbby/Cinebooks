@@ -215,6 +215,7 @@ ul#nav li a:hover {
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
+
 @keyframes lds-ring {
   0% {
     transform: rotate(0deg);
@@ -311,7 +312,7 @@ ul#nav li a:hover {
   }
 }
 
-/* Gaya untuk mode lanskap pada perangkat seluler */
+/* Gaya untuk mode landscape pada perangkat seluler */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
   .card {
     justify-content: space-between;

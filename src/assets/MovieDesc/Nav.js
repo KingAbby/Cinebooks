@@ -47,9 +47,6 @@ const Nav = ({ home, searchByText, selectGenre, genre, searchText }) => {
             </li>
           </>
         )}
-        <li>
-          <a href="AboutUs.js">About Us</a>
-        </li>
       </ul>
     </div>
   );
