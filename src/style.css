@@ -12,7 +12,7 @@ body {
   padding-right: 20px;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
 
   body {
     overflow-x: hidden;
@@ -25,12 +25,12 @@ body {
 }
 
 @media (min-width: 481px) {
-  /* Mode lanskap */
+  
   body {
     overflow-x: hidden;
     user-scalable: none;
   }
-}
+} */
 
 /* Nav-Bar */
 
@@ -310,13 +310,37 @@ input:hover {
 
 #card .card-body {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* grid-template-rows: auto auto; */
+  /* grid-template-columns: repeat(5, minmax(250px, 1fr)); */
   grid-gap: 5px;
   margin: 0 auto;
-  /* margin-left: 15px; */
   padding-top: 20px;
   flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 1200px) {
+  #card .card-body {
+    grid-template-columns: repeat(5, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  #card .card-body {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  #card .card-body {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  #card .card-body {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
 }
 
 /* Responsive card */
@@ -342,15 +366,17 @@ input:hover {
 
 @media (orientation: landscape) and (max-height: 480px) {
 
-  .slideshow-container{
+  /* .slideshow-container{
     padding-right: 1em;
-  }
+  } */
 
   #card .card-body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 10px;
-    margin-left: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 5px;
+    margin: 0 auto; 
+    max-width: 100%; 
+    box-sizing: border-box; 
     grid-gap: 5px;
   }
 
@@ -369,7 +395,7 @@ input:hover {
   width: 100%;
   min-width: 250px;
   padding: 10px 12px;
-  border: 2.5px solid #df3375;
+  border: 2.5px solid #50C878;
   background-color: #ccf381;
   border-radius: 20px;
   cursor: pointer;
@@ -386,7 +412,7 @@ input:hover {
 }
 
 #card .body:hover {
-  box-shadow: 20px 20px 30px #df3375;
+  box-shadow: 20px 20px 30px #50C878;
   background-color: #ccf381;
   transform: scale(1.1);
   z-index: 2;

@@ -18,7 +18,7 @@ const Nav = ({ home, searchByText, selectGenre, genre, searchText }) => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="AboutUs.js">About Us</a>
+          <a href="/AboutUs.js">About Us</a>
         </li>
         {home && (
           <>
