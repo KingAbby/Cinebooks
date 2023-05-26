@@ -52,8 +52,8 @@ ul#nav li a:hover {
   color: #ccf381;
   background-color: #08070e;
   border-radius: 20px;
-  box-shadow: 10px 10px 30px #df3375;
-  border: 2.5px solid #df3375;
+  box-shadow: 10px 10px 30px #50c878;
+  border: 2.5px solid #50c878;
 }
 
 #info .movie img {
@@ -80,11 +80,16 @@ ul#nav li a:hover {
   background-color: #08070e;
   border-radius: 10px;
   padding-bottom: 1px;
-  box-shadow: 10px 10px 30px #df3375;
+  box-shadow: 10px 10px 30px #50c878;
   color: #ccf381;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
+
+  #info {
+    margin-left: 30px;
+  }
+
   .category {
     flex-wrap: wrap;
   }
@@ -135,8 +140,8 @@ ul#nav li a:hover {
 .genre {
   background-color: #08070e;
   border-radius: 10px;
-  padding-bottom: 1px;
-  box-shadow: 10px 10px 30px #df3375;
+  padding-bottom: 20px;
+  box-shadow: 10px 10px 30px #50c878;
   color: #ccf381;
   margin-bottom: 10px;
 }
@@ -164,7 +169,7 @@ ul#nav li a:hover {
 }
 
 .category div:hover {
-  background-color: #df3375;
+  background-color: #50c878;
   color: #08070e;
 }
 
@@ -234,39 +239,47 @@ ul#nav li a:hover {
 /* Responsive Styles */
 
 @media screen and (max-width: 768px) {
+  #info {
+    margin-left: 30px;
+  }
+
   .movie-overview {
-  padding-left: 0;
+    padding-left: 0;
   }
-  
+
   #info .desc h4 {
-  margin-top: 0;
+    margin-top: 0;
   }
-  
+
   .category div {
-  padding: 15px 40px;
-  font-size: 12px;
+    padding: 15px 40px;
+    font-size: 12px;
   }
+}
+
+@media screen and (max-width: 480px) {
+  #info {
+    margin-left: 30px;
   }
-  
-  @media screen and (max-width: 480px) {
+
   .movie {
-  margin: 10px;
-  padding: 10px;
+    margin: 10px;
+    padding: 10px;
   }
-  
+
   .category div {
-  padding: 10px 30px;
-  font-size: 10px;
+    padding: 10px 30px;
+    font-size: 10px;
   }
-  
+
   .title h2 {
-  font-size: 30px;
+    font-size: 30px;
   }
-  
+
   .deskripsi {
-  font-size: 12px;
+    font-size: 12px;
   }
-  }
+}
 
 /* Responsive CSS */
 
@@ -294,6 +307,7 @@ ul#nav li a:hover {
 }
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
+  /* #info Buat Tablet*/
   .card {
     flex-direction: column;
     align-items: center;
@@ -307,6 +321,7 @@ ul#nav li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 30px;
   }
 
   .desc {
@@ -329,6 +344,9 @@ ul#nav li a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  #info {
+    margin-left: 30px;
+  }
   .desc .video-player {
     padding-top: 0; /* Perbandingan aspek 4:3 (3/4 * 100) */
     max-height: 250px;
@@ -357,6 +375,7 @@ ul#nav li a:hover {
     margin-top: 20px;
     flex-direction: column;
     align-items: center;
+    margin-left: 30px;
   }
 
   .desc {
@@ -368,7 +387,6 @@ ul#nav li a:hover {
     flex-wrap: wrap;
   }
 }
-
 
 /* Gaya untuk mode landscape pada perangkat seluler */
 @media only screen and (max-width: 992px) and (orientation: landscape) {
@@ -400,6 +418,7 @@ ul#nav li a:hover {
 
 /* Gaya untuk mode landscape pada perangkat seluler */
 @media only screen and (max-width: 1195px) and (orientation: landscape) {
+  /* #info Buat Tablet selebar Surface */ 
   .card {
     justify-content: space-between;
   }
@@ -414,6 +433,7 @@ ul#nav li a:hover {
     margin-top: 20px;
     flex-direction: column;
     align-items: center;
+    margin-left: 30px;
   }
 
   .desc {
@@ -425,3 +445,5 @@ ul#nav li a:hover {
     flex-wrap: wrap;
   }
 }
+
+

@@ -9,7 +9,9 @@
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .card {
@@ -21,8 +23,21 @@
   padding-bottom: 2em;
   box-shadow: 5px 5px 7px #CCF381;
   background-color: #2d2b35;
-  margin-left: 20px;
   border-radius: 7px;
+}
+
+/* Tampilan untuk perangkat mobile */
+@media (max-width: 767px) {
+  .card-container {
+    justify-content: center;
+  }
+
+  /* Tampilan untuk landscape mode pada perangkat mobile */
+  @media (orientation: landscape) {
+    .card-container {
+      justify-content: space-between;
+    }
+  }
 }
 
 .card-front,
@@ -52,6 +67,14 @@
   border-radius: 5px;
 }
 
+.card-back h4 {
+  margin-top: -13em;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  /* align-items: flex-start; */
+}
+
 .card.flipped .card-front {
   transform: rotateY(180deg);
 }
@@ -63,10 +86,10 @@
 .card-img-top {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit:fill;
   border-radius: 8px 8px 0 0;
   max-height: 200px;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .card-body {
@@ -81,7 +104,11 @@
 }
 
 .card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
+  margin-top: 4em;
 }
 
 .btn {
@@ -113,6 +140,7 @@
 .custom-img {
   width: 100%;
   border-radius: 8px 8px 0 0;
+  margin-bottom: -2em;
 }
 
 /* Additional styles for hover effect */
