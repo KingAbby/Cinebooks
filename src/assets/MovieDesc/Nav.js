@@ -1,4 +1,5 @@
 import React from "react";
+import LOGO from "../Images/LogoName.png";
 
 const Nav = ({ home, searchByText, selectGenre, genre, searchText }) => {
   const handleOnChangeText = (e) => {
@@ -14,6 +15,9 @@ const Nav = ({ home, searchByText, selectGenre, genre, searchText }) => {
   return (
     <div>
       <ul id="nav">
+        <li className="logo">
+          <img src={LOGO} style={{ width: "40%" }} />
+        </li>
         <li>
           <a href="/">Home</a>
         </li>
