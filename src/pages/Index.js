@@ -103,15 +103,7 @@ const Index = () => {
             <img src={SHAZAM} style={{ width: "100%" }} />
           </div>
 
-          {/* <!-- Next and previous buttons --> */}
-          <div>
-            <a className="prev" onclick="plusSlides(-1)">
-              &#10094;
-            </a>
-            <a className="next" onclick="plusSlides(1)">
-              &#10095;
-            </a>
-          </div>
+          
           <br />
 
           {/* <!-- The dots/circles --> */}
@@ -119,6 +111,7 @@ const Index = () => {
             <span className="dot" onclick="currentSlide(1)"></span>
             <span className="dot" onclick="currentSlide(2)"></span>
             <span className="dot" onclick="currentSlide(3)"></span>
+            <span className="dot" onclick="currentSlide(4)"></span>
           </div>
         </div>
       </section>
