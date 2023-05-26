@@ -16,7 +16,7 @@ const Nav = ({ home, searchByText, selectGenre, genre, searchText }) => {
     <div>
       <ul id="nav">
         <li className="logo">
-          <img src={LOGO} style={{ width: "40%" }} />
+          <img src={LOGO} style={{ width: "50%" }} />
         </li>
         <li>
           <a href="/">Home</a>
