@@ -125,3 +125,42 @@
 .card.flipped:hover {
   transform: scale(1);
 }
+
+/*Icons*/
+.icons {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+  margin-right: 30px;
+  color: #5C1A1B;
+}
+
+.icons .github-icon{
+  margin: 0 20px;
+}
+
+.icons .github-icon:hover {
+  transform: scale(1.2);
+  /*color: #171515;*/
+  color: azure;
+}
+
+.icons .instagram-icon {
+  margin: 0 20px;
+}
+
+.icons .instagram-icon:hover {
+  transform: scale(1.2);
+  color: #d62976;
+}
+
+.icons .spotify-icon {
+  margin: 0 20px;
+}
+
+.icons .spotify-icon:hover {
+  transform: scale(1.2);
+  color: #1db954;
+}

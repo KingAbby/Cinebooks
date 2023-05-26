@@ -3,8 +3,10 @@ import Nav from "../assets/MovieDesc/Nav";
 import "../assets/MovieDesc/AboutUs.css";
 import Abi from "../assets/Images/Abi.jpg";
 import Fikri from "../assets/Images/Fikri.jpg";
-// import Anthonio from "../assets/Images/Anthonio.jpg";
-// import Gilbert from "../assets/Images/Gilbert.jpg";
+import Anthonio from "../assets/Images/Anthonio.jpg";
+import Gilbert from "../assets/Images/Gilbert.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faInstagram, faSpotify } from '@fortawesome/free-brands-svg-icons';
 
 function AboutUs() {
   const [flippedCard, setFlippedCard] = useState(null);
@@ -38,20 +40,19 @@ function AboutUs() {
             />
             <div className="card-body">
               <h5 className="card-title">
-                Abi Andrea Nurpasha (00000079207) - Informatika
+                Abi Andrea Nurpasha (00000079207) - Informatika - 'KingAbby'
               </h5>
-              <p className="card-text"> Isi Sendiri</p>
-              <div className="icons">
-                <a href="https://github.com/KingAbby">
-                  <i className="ri-github-fill"></i>
-                </a>
-                <a href="https://www.instagram.com/abiandrea_/">
-                  <i className="ri-instagram-fill"></i>
-                </a>
-                <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                  <i className="ri-spotify-fill"></i>
-                </a>
-              </div>
+
+              <p className="card-text">
+                <div className="icons">
+                  <a className="github-icon" href="https://github.com/KingAbby"><FontAwesomeIcon icon={faGithub} size="lg" /></a>
+
+                  <a className="instagram-icon" href="https://www.instagram.com/abiandrea_/"><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+
+                  <a className="spotify-icon" href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5"> <FontAwesomeIcon icon={faSpotify} size="lg" /> </a>
+                </div>
+              </p>
+
               <button
                 className="btn btn-primary custom-btn"
                 onClick={() => toggleFlip(0)}
@@ -63,17 +64,7 @@ function AboutUs() {
           <div className="card-back">
             <h3>Isi Deskripsi Sendiri</h3>
             <h5>Informatika</h5>
-            <div className="icons">
-              <a href="https://github.com/KingAbby">
-                <i className="ri-github-fill"></i>
-              </a>
-              <a href="https://www.instagram.com/abiandrea_/">
-                <i className="ri-instagram-fill"></i>
-              </a>
-              <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                <i className="ri-spotify-fill"></i>
-              </a>
-            </div>
+            
             <button
               className="btn btn-primary custom-btn"
               onClick={() => toggleFlip(0)}
@@ -97,20 +88,19 @@ function AboutUs() {
             />
             <div className="card-body">
               <h5 className="card-title">
-                Fikri Naufal Andrasito (00000079229) - Informatika
+                Fikri Naufal Andrasito (00000079229) - Informatika - 'naufaland'
               </h5>
-              <p className="card-text"> Saya Adalah</p>
-              <div className="icons">
-                <a href="https://github.com/KingAbby">
-                  <i className="ri-github-fill"></i>
-                </a>
-                <a href="https://www.instagram.com/abiandrea_/">
-                  <i className="ri-instagram-fill"></i>
-                </a>
-                <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                  <i className="ri-spotify-fill"></i>
-                </a>
-              </div>
+
+              <p className="card-text">
+                <div className="icons">
+                  <a className="github-icon" href="https://github.com/naufaland"><FontAwesomeIcon icon={faGithub} size="lg" /></a>
+
+                  <a className="instagram-icon" href="https://www.instagram.com/fikrinaufaland_/"><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+
+                  <a className="spotify-icon" href="https://open.spotify.com/user/tjfsbertyp0s4wzi6ypbrikui?si=387e79adb596420c"> <FontAwesomeIcon icon={faSpotify} size="lg" /> </a>
+                </div>
+              </p>
+              
               <button
                 className="btn btn-primary custom-btn"
                 onClick={() => toggleFlip(1)}
@@ -122,17 +112,7 @@ function AboutUs() {
           <div className="card-back">
             <h3>Isi Deskripsi Sendiri</h3>
             <h5>Informatika</h5>
-            <div className="icons">
-              <a href="https://github.com/KingAbby">
-                <i className="ri-github-fill"></i>
-              </a>
-              <a href="https://www.instagram.com/abiandrea_/">
-                <i className="ri-instagram-fill"></i>
-              </a>
-              <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                <i className="ri-spotify-fill"></i>
-              </a>
-            </div>
+            
             <button
               className="btn btn-primary custom-btn"
               onClick={() => toggleFlip(1)}
@@ -149,27 +129,26 @@ function AboutUs() {
           onMouseLeave={() => toggleFlip(2)}
         >
           <div className="card-front">
-            <img
-              //   src={Abi}
+           <img
+              src={Anthonio}
               className="card-img-top custom-img"
-              alt="Abi Andrea Nurpasha"
+              alt="Anthonio Raphael Purteuro Bulo"
             />
             <div className="card-body">
               <h5 className="card-title">
-                Anthonio Raphael Porteuro Bulo (00000079343) - Informatika
+                Anthonio Raphael Porteuro Bulo (00000079343) - Informatika - 'Dreamybull'
               </h5>
-              <p className="card-text"> Saya Adalah</p>
-              <div className="icons">
-                <a href="https://github.com/KingAbby">
-                  <i className="ri-github-fill"></i>
-                </a>
-                <a href="https://www.instagram.com/abiandrea_/">
-                  <i className="ri-instagram-fill"></i>
-                </a>
-                <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                  <i className="ri-spotify-fill"></i>
-                </a>
-              </div>
+
+              <p className="card-text">
+                <div className="icons">
+                  <a className="github-icon" href="https://github.com/AnthonioMasbroo"><FontAwesomeIcon icon={faGithub} size="lg" /></a>
+
+                  <a className="instagram-icon" href="https://www.instagram.com/fikrinaufaland_/"><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+
+                  <a className="spotify-icon" href="https://open.spotify.com/user/tjfsbertyp0s4wzi6ypbrikui?si=387e79adb596420c"> <FontAwesomeIcon icon={faSpotify} size="lg" /> </a>
+                </div>
+              </p>
+
               <button
                 className="btn btn-primary custom-btn"
                 onClick={() => toggleFlip(2)}
@@ -181,17 +160,7 @@ function AboutUs() {
           <div className="card-back">
             <h3>Isi Deskripsi Sendiri</h3>
             <h5>Informatika</h5>
-            <div className="icons">
-              <a href="https://github.com/KingAbby">
-                <i className="ri-github-fill"></i>
-              </a>
-              <a href="https://www.instagram.com/abiandrea_/">
-                <i className="ri-instagram-fill"></i>
-              </a>
-              <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                <i className="ri-spotify-fill"></i>
-              </a>
-            </div>
+            
             <button
               className="btn btn-primary custom-btn"
               onClick={() => toggleFlip(2)}
@@ -208,27 +177,26 @@ function AboutUs() {
           onMouseLeave={() => toggleFlip(3)}
         >
           <div className="card-front">
-            <img
-              //   src={Abi}
+          <img
+              src={Gilbert}
               className="card-img-top custom-img"
-              alt="Abi Andrea Nurpasha"
+              alt="Gilbert Parluhutan Pakpahan"
             />
             <div className="card-body">
               <h5 className="card-title">
-                Gilbert Parluhutan Pakpahan (00000079904) - Informatika
+                Gilbert Parluhutan Pakpahan (00000079904) - Informatika - 'Giltp'
               </h5>
-              <p className="card-text"> Saya Adalah</p>
-              <div className="icons">
-                <a href="https://github.com/KingAbby">
-                  <i className="ri-github-fill"></i>
-                </a>
-                <a href="https://www.instagram.com/abiandrea_/">
-                  <i className="ri-instagram-fill"></i>
-                </a>
-                <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                  <i className="ri-spotify-fill"></i>
-                </a>
-              </div>
+
+              <p className="card-text">
+                <div className="icons">
+                  <a className="github-icon" href="https://github.com/Giltp"><FontAwesomeIcon icon={faGithub} size="lg" /></a>
+
+                  <a className="instagram-icon" href="https://www.instagram.com/giltpp"><FontAwesomeIcon icon={faInstagram} size="lg" /></a>
+
+                  <a className="spotify-icon" href="https://open.spotify.com/user/e72d0ofcsfowu8zf1t3vwqbci"> <FontAwesomeIcon icon={faSpotify} size="lg" /> </a>
+                </div>
+              </p>
+
               <button
                 className="btn btn-primary custom-btn"
                 onClick={() => toggleFlip(3)}
@@ -240,17 +208,7 @@ function AboutUs() {
           <div className="card-back">
             <h3>Isi Deskripsi Sendiri</h3>
             <h5>Informatika</h5>
-            <div className="icons">
-              <a href="https://github.com/KingAbby">
-                <i className="ri-github-fill"></i>
-              </a>
-              <a href="https://www.instagram.com/abiandrea_/">
-                <i className="ri-instagram-fill"></i>
-              </a>
-              <a href="https://open.spotify.com/user/21ctzxad6xictyjhrjqzse5cy?si=fc243f15b8a04cc5">
-                <i className="ri-spotify-fill"></i>
-              </a>
-            </div>
+            
             <button
               className="btn btn-primary custom-btn"
               onClick={() => toggleFlip(3)}
