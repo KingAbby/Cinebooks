@@ -275,8 +275,10 @@ function AboutUs() {
             </div>
           </div>
           <div className="card-back">
-            <h3>Isi Deskripsi Sendiri</h3>
-            <h5>Informatika</h5>
+            <h4>
+            Walau saya jarang menonton film, apalagi pergi menonton ke bioskop, saya pernah menonton film franchise seperti MCU.
+            
+            </h4>
 
             <button
               className="btn btn-primary custom-btn"
