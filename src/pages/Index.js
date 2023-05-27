@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Nav from "../assets/MovieDesc/Nav";
 import "../style.css";
 import { useNavigate } from "react-router-dom";
@@ -15,10 +15,18 @@ const Index = () => {
   const [genre, setGenre] = React.useState(false);
   const [searchText, setSearchText] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
+  const genreDropdownRef = useRef(null);
+  const [scrollToMovieSelection, setScrollToMovieSelection] = React.useState(false);
 
   const handleChangeText = (text) => {
     setSearchText(text);
   };
+
+  // useEffect(() => {
+  //   if (genreDropdownRef.current) {
+  //     genreDropdownRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [movieData]);
 
   const debouncedSearch = React.useMemo(
     () => debounce(handleChangeText, 300),
@@ -52,13 +60,13 @@ const Index = () => {
     }
   };
 
-  React.useEffect(() => {
-    getApi();
-  }, [searchText, genre]);
-
   const handleToDetail = (id) => {
     navigate(`/detail/${id}`);
   };
+
+  React.useEffect(() => {
+    getApi();
+  }, [searchText, genre]);
 
   React.useEffect(() => {
     // Mencegah penggeseran layar pada perangkat mobile
@@ -75,12 +83,24 @@ const Index = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (scrollToMovieSelection && genreDropdownRef.current) {
+      genreDropdownRef.current.scrollIntoView({ behavior: "smooth" });
+      setScrollToMovieSelection(false);
+    }
+  }, [scrollToMovieSelection]);
+
+  const selectGenre = (genre) => {
+    setGenre(genre);
+    setScrollToMovieSelection(true);
+  };
+
   return (
     <>
       <Nav
         home={true}
         searchByText={debouncedSearch}
-        selectGenre={setGenre}
+        selectGenre={selectGenre}
         genre={genre}
         searchText={searchText}
       />
@@ -103,7 +123,6 @@ const Index = () => {
             <img src={SHAZAM} style={{ width: "100%" }} />
           </div>
 
-          
           <br />
 
           {/* <!-- The dots/circles --> */}
@@ -127,7 +146,7 @@ const Index = () => {
       ) : (
         <>
           <section id="card">
-            <h2>Movie Selection</h2>
+            <h2 ref={genreDropdownRef}>Movie Selection</h2>
             <div className="card-body">
               {movieData.map((item, index) => (
                 <div className="body" key={item.id}>
