@@ -7,6 +7,7 @@ import GETHARD from "../assets/Images/gethard.png";
 import MEGAN from "../assets/Images/megan.png";
 import SHAZAM from "../assets/Images/shazam.png";
 import defaultPicture from "../assets/Images/default.png";
+import NoData from "../assets/Images/NotFound.png";
 import { debounce } from "lodash";
 
 const Index = () => {
@@ -143,7 +144,7 @@ const Index = () => {
             <div></div>
           </div>
         </div>
-      ) : (
+      ) : movieData.length === 0 ? <div className="container-notfound"><img className="notfound" src={NoData} alt="NotFound"/></div>: ( 
         <>
           <section id="card">
             <h2 ref={genreDropdownRef}>Movie Selection</h2>

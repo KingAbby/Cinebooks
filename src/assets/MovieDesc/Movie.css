@@ -7,11 +7,18 @@
   font-size: medium;
 }
 
+#nav select:hover {
+  background-color: #111016;
+  color: #ccf381;
+  font-weight: bold;
+  font-size: medium;
+}
+
 #nav option {
   text-decoration: none;
   font-size: 20px;
   padding: 10px 0;
-  color: #111016;
+  color: #ccf381;
   font-weight: bold;
   transition: 0.5s ease;
 }
@@ -62,6 +69,20 @@ ul#nav li a:hover {
   /* float: left; */
 }
 
+#info .movie h3 {
+  font-size: 27px;
+}
+
+#info .movie h5 {
+  font-size: 21px;
+  margin-top: -1em;
+}
+
+#info .movie h6 {
+  font-size: 18px;
+  margin-top: -1em;
+}
+
 /* Grid Content */
 
 .movie-overview {
@@ -84,6 +105,11 @@ ul#nav li a:hover {
   color: #ccf381;
   margin-bottom: 10px;
 }
+
+.sinopsis h5 {
+  font-size: 2px;
+}
+
 @media screen and (max-width: 768px) {
 
   #info {
@@ -97,7 +123,7 @@ ul#nav li a:hover {
 
 .deskripsi {
   color: wheat;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;
@@ -117,7 +143,7 @@ ul#nav li a:hover {
 }
 
 #info .desc h5 {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;
@@ -127,7 +153,7 @@ ul#nav li a:hover {
 }
 
 #info .desc h4 {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 500;
   margin-left: 50px;
   margin-right: 50px;
@@ -160,7 +186,7 @@ ul#nav li a:hover {
 .category div {
   padding: 20px 60px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 17px;
   color: #ccf381;
   background-color: #111016;
   border-radius: 20px;
@@ -277,7 +303,11 @@ ul#nav li a:hover {
   }
 
   .deskripsi {
-    font-size: 12px;
+    font-size: 17px;
+  }
+
+  .category div {
+    font-size: 15px;
   }
 }
 
@@ -307,6 +337,30 @@ ul#nav li a:hover {
 }
 
 @media only screen and (max-width: 992px) and (orientation: portrait) {
+  /* #info Buat Tablet*/
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-item {
+    flex-basis: 100%;
+  }
+
+  #info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  .desc {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1284px) and (orientation: portrait) {
   /* #info Buat Tablet*/
   .card {
     flex-direction: column;
