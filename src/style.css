@@ -393,7 +393,7 @@ input:hover {
 @media (max-width: 480px) {
   body {
     overflow-x: hidden;
-    position: sticky;
+    /* position: sticky; */
   }
 
   #card .card-body {
