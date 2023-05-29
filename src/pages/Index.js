@@ -69,20 +69,20 @@ const Index = () => {
     getApi();
   }, [searchText, genre]);
 
-  React.useEffect(() => {
-    // Mencegah penggeseran layar pada perangkat mobile
-    const preventTouchMove = (event) => {
-      event.preventDefault();
-    };
+  // React.useEffect(() => {
+  //   // Mencegah penggeseran layar pada perangkat mobile
+  //   const preventTouchMove = (event) => {
+  //     event.preventDefault();
+  //   };
 
-    document.addEventListener("touchmove", preventTouchMove, {
-      passive: false,
-    });
+  //   document.addEventListener("touchmove", preventTouchMove, {
+  //     passive: false,
+  //   });
 
-    return () => {
-      document.removeEventListener("touchmove", preventTouchMove);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("touchmove", preventTouchMove);
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (scrollToMovieSelection && genreDropdownRef.current) {
