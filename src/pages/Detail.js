@@ -3,11 +3,20 @@ import Nav from "../assets/MovieDesc/Nav";
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player/lazy";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "UA-270069478-1";
+
+ReactGA.initialize(TRACKING_ID);
 
 const Detail = () => {
   const { id } = useParams();
   const [movieData, setMovieData] = useState({});
   const [isLoading, setLoading] = useState(false);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const getApi = async () => {
     setLoading(true);

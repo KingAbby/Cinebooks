@@ -9,6 +9,11 @@ import SHAZAM from "../assets/Images/shazam.png";
 import defaultPicture from "../assets/Images/default.png";
 import NoData from "../assets/Images/NotFound.png";
 import { debounce } from "lodash";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "UA-270069478-1";
+
+ReactGA.initialize(TRACKING_ID);
 
 const Index = () => {
   const navigate = useNavigate();
@@ -18,6 +23,10 @@ const Index = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const genreDropdownRef = useRef(null);
   const [scrollToMovieSelection, setScrollToMovieSelection] = React.useState(false);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   const handleChangeText = (text) => {
     setSearchText(text);
