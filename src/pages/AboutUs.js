@@ -6,7 +6,11 @@ import Fikri from "../assets/Images/Fikri.jpg";
 import Anthonio from "../assets/Images/Anthonio.jpg";
 import Gilbert from "../assets/Images/Gilbert.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faGithub, faInstagram, faSpotify } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faSpotify,
+} from "@fortawesome/free-brands-svg-icons";
 
 function AboutUs() {
   const [flippedCard, setFlippedCard] = useState(null);
@@ -145,7 +149,7 @@ function AboutUs() {
           <div className="card-back">
             <h4>
               "Ngomongin soal Film, saya biasanya suka dengan Film yang berbau
-              action dan adventure. Mungkin 1 Film yang visa di jadiin
+              action dan adventure. Mungkin 1 Film yang bisa di jadiin
               rekomendasi adalah 'Extarction' yang diperanin sama Chris
               Hemsworth. Atau mau yang dicampur sama comedy nya? 'The Big 4' sih
               rekomendasi saya".
@@ -276,8 +280,10 @@ function AboutUs() {
           </div>
           <div className="card-back">
             <h4>
-            Walau saya jarang menonton film, apalagi pergi menonton ke bioskop, saya pernah menonton film franchise seperti MCU.
-            
+              Saya lebih sering menonton film yang sudah terkenal lebih dulu,
+              seperti franchise MCU. Tapi, saya tidak ada masalah jika ada yang
+              mengajak saya nonton film. Film yang saya suka adalah spiderman:
+              into-the-spiderverse, Avenger: Endgame, dan A Silent Voice.
             </h4>
 
             <button
