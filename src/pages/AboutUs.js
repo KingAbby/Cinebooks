@@ -150,7 +150,7 @@ function AboutUs() {
             <h4>
               "Ngomongin soal Film, saya biasanya suka dengan Film yang berbau
               action dan adventure. Mungkin 1 Film yang bisa di jadiin
-              rekomendasi adalah 'Extarction' yang diperanin sama Chris
+              rekomendasi adalah 'Extraction' yang diperanin sama Chris
               Hemsworth. Atau mau yang dicampur sama comedy nya? 'The Big 4' sih
               rekomendasi saya".
             </h4>
