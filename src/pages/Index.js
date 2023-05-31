@@ -179,7 +179,7 @@ const Index = () => {
                       <i className="ri-star-half-line"></i>
                       <i className="ri-star-s-line"></i>
                     </div>
-                    <h4 onClick={() => handleToDetail(item.id)}>
+                    <h4 className="Movie-Info" onClick={() => handleToDetail(item.id)}>
                       Movie Information
                     </h4>
                   </div>

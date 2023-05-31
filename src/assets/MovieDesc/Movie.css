@@ -1,8 +1,8 @@
 /* Genre Dropdown */
 
 #nav select {
-  background-color: #ccf381;
-  color: #111016;
+  background-color: #111016;
+  color: #ccf381;
   font-weight: bold;
   font-size: medium;
 }
