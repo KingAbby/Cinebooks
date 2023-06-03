@@ -572,18 +572,18 @@ input:hover {
 }
 
 /* Overflow CSS */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-} */
+}
 
 /* Track */
-/* ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #111016; 
   -webkit-border-radius: 10px;
   border-radius: 10px;
-} */
+}
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
