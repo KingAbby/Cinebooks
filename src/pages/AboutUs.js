@@ -33,8 +33,6 @@ function AboutUs() {
       <div id="AboutUs" className="card-container">
         <div
           className={`card ${isCardFlipped(0) ? "flipped" : ""}`}
-          onMouseEnter={() => toggleFlip(0)}
-          onMouseLeave={() => toggleFlip(0)}
         >
           <div className="card-front">
             <img
@@ -72,7 +70,7 @@ function AboutUs() {
 
               <button
                 className="btn btn-primary custom-btn"
-                onClick={() => toggleFlip(0)}
+                onClick={() => toggleFlip(0, !isCardFlipped(0))}
               >
                 {isCardFlipped(0) ? "LESS INFO" : "More Info"}
               </button>
@@ -88,7 +86,7 @@ function AboutUs() {
             </h4>
             <button
               className="btn btn-primary custom-btn"
-              onClick={() => toggleFlip(0)}
+              onClick={() => toggleFlip(0, false)}
             >
               LESS INFO
             </button>
@@ -98,8 +96,6 @@ function AboutUs() {
         {/* Card 2 */}
         <div
           className={`card ${isCardFlipped(1) ? "flipped" : ""}`}
-          onMouseEnter={() => toggleFlip(1)}
-          onMouseLeave={() => toggleFlip(1)}
         >
           <div className="card-front">
             <img
@@ -140,7 +136,7 @@ function AboutUs() {
 
               <button
                 className="btn btn-primary custom-btn"
-                onClick={() => toggleFlip(1)}
+                onClick={() => toggleFlip(1, !isCardFlipped(1))}
               >
                 {isCardFlipped(1) ? "LESS INFO" : "More Info"}
               </button>
@@ -156,7 +152,7 @@ function AboutUs() {
             </h4>
             <button
               className="btn btn-primary custom-btn"
-              onClick={() => toggleFlip(1)}
+              onClick={() => toggleFlip(1, false)}
             >
               LESS INFO
             </button>
@@ -166,8 +162,6 @@ function AboutUs() {
         {/* Card 3 */}
         <div
           className={`card ${isCardFlipped(2) ? "flipped" : ""}`}
-          onMouseEnter={() => toggleFlip(2)}
-          onMouseLeave={() => toggleFlip(2)}
         >
           <div className="card-front">
             <img
@@ -208,7 +202,7 @@ function AboutUs() {
 
               <button
                 className="btn btn-primary custom-btn"
-                onClick={() => toggleFlip(2)}
+                onClick={() => toggleFlip(2, !isCardFlipped(2))}
               >
                 {isCardFlipped(2) ? "LESS INFO" : "More Info"}
               </button>
@@ -223,7 +217,7 @@ function AboutUs() {
             </h4>
             <button
               className="btn btn-primary custom-btn"
-              onClick={() => toggleFlip(2)}
+              onClick={() => toggleFlip(2, false)}
             >
               LESS INFO
             </button>
@@ -233,8 +227,6 @@ function AboutUs() {
         {/* Card 4 */}
         <div
           className={`card ${isCardFlipped(3) ? "flipped" : ""}`}
-          onMouseEnter={() => toggleFlip(3)}
-          onMouseLeave={() => toggleFlip(3)}
         >
           <div className="card-front">
             <img
@@ -272,7 +264,7 @@ function AboutUs() {
 
               <button
                 className="btn btn-primary custom-btn"
-                onClick={() => toggleFlip(3)}
+                onClick={() => toggleFlip(3, !isCardFlipped(3))}
               >
                 {isCardFlipped(3) ? "LESS INFO" : "More Info"}
               </button>
@@ -288,7 +280,7 @@ function AboutUs() {
 
             <button
               className="btn btn-primary custom-btn"
-              onClick={() => toggleFlip(3)}
+              onClick={() => toggleFlip(3, false)}
             >
               LESS INFO
             </button>
