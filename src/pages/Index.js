@@ -32,12 +32,6 @@ const Index = () => {
     setSearchText(text);
   };
 
-  // useEffect(() => {
-  //   if (genreDropdownRef.current) {
-  //     genreDropdownRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [movieData]);
-
   const debouncedSearch = React.useMemo(
     () => debounce(handleChangeText, 300),
     []
@@ -78,21 +72,6 @@ const Index = () => {
     getApi();
   }, [searchText, genre]);
 
-  // React.useEffect(() => {
-  //   // Mencegah penggeseran layar pada perangkat mobile
-  //   const preventTouchMove = (event) => {
-  //     event.preventDefault();
-  //   };
-
-  //   document.addEventListener("touchmove", preventTouchMove, {
-  //     passive: false,
-  //   });
-
-  //   return () => {
-  //     document.removeEventListener("touchmove", preventTouchMove);
-  //   };
-  // }, []);
-
   useEffect(() => {
     if (scrollToMovieSelection && genreDropdownRef.current) {
       genreDropdownRef.current.scrollIntoView({ behavior: "smooth" });
@@ -116,7 +95,6 @@ const Index = () => {
       />
       <section>
         <div className="slideshow-container">
-          {/* <!-- Full-width images with number and caption text --> */}
           <div className="mySlides fade">
             <img src={ANTMAN} style={{ width: "100%" }} />
           </div>
@@ -135,7 +113,6 @@ const Index = () => {
 
           <br />
 
-          {/* <!-- The dots/circles --> */}
           <div style={{ textAlign: "center" }}>
             <span className="dot" onclick="currentSlide(1)"></span>
             <span className="dot" onclick="currentSlide(2)"></span>
@@ -215,7 +192,7 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
   }
 
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
 export default Index;

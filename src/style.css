@@ -4,33 +4,12 @@ body {
   background-size: cover;
   overflow-x: hidden;
   margin: 0;
-  /* padding-right: 20px; */
 }
 
 .container {
   padding: 0 20px;
   padding-right: 20px;
 }
-
-/* @media (max-width: 480px) {
-
-  body {
-    overflow-x: hidden;
-    user-scalable: none;
-  }
-
-  .container {
-    padding: 0;
-  }
-}
-
-@media (min-width: 481px) {
-  
-  body {
-    overflow-x: hidden;
-    user-scalable: none;
-  }
-} */
 
 /* Nav-Bar */
 
@@ -50,7 +29,6 @@ ul#nav {
   margin-bottom: 3em;
   padding: 20px 2em;
   background-image: linear-gradient(to left, #ccf381, #92ce22);
-  /* background-color: #ccf381; */
 }
 
 #nav li {
@@ -83,12 +61,6 @@ ul#nav li a:hover {
 .right-nav select {
   border-radius: 4px;
 }
-
-/* .right-nav select:hover {
-  border-color: #50C878;
-  background-color: #50C878;
-} */
-/*Logo*/
 
 /*Search Bar*/
 
@@ -354,7 +326,6 @@ input:hover {
 
 #card .card-body {
   display: grid;
-  /* grid-template-columns: repeat(5, minmax(250px, 1fr)); */
   grid-gap: 5px;
   margin: 0 auto;
   padding-top: 20px;
@@ -599,9 +570,6 @@ input:hover {
 .container-notfound {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* height: 100vh; */
-  /* margin: 0; */
 }
 
 .notfound {

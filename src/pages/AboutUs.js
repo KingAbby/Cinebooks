@@ -185,7 +185,7 @@ function AboutUs() {
 
                   <a
                     className="instagram-icon"
-                    href="https://www.instagram.com/fikrinaufaland_/"
+                    href="https://www.instagram.com/teo_bulo/"
                   >
                     <FontAwesomeIcon icon={faInstagram} size="lg" />
                   </a>
